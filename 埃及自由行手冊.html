@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>埃及自由行手冊 2026｜9/25 – 10/11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#f6efe3; --sand2:#efe4cf; --ink:#2b2118; --ink2:#5c4d3c;
+  --gold:#b8860b; --gold2:#d4a017; --nile:#1f4e5f; --nile2:#2d6e83;
+  --terra:#a4552e; --card:#fffdf8; --line:#e2d5bb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Noto Sans TC',-apple-system,sans-serif;background:var(--sand);color:var(--ink);line-height:1.85;font-size:16px}
+h1,h2,h3,h4{font-family:'Noto Serif TC',serif;line-height:1.4}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:99;background:rgba(43,33,24,.96);backdrop-filter:blur(8px);display:flex;justify-content:center;flex-wrap:wrap;gap:2px;padding:8px 10px;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+nav a{color:#e8dcc3;text-decoration:none;padding:6px 14px;border-radius:20px;font-size:14.5px;font-weight:500;white-space:nowrap;transition:.2s}
+nav a:hover{background:var(--gold);color:#fff}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(25,18,10,.35),rgba(25,18,10,.65)),url('images/giza.jpg') center/cover;color:#fff;padding:60px 20px}
+.hero .inner{max-width:820px}
+.hero .eyebrow{letter-spacing:.5em;font-size:14px;color:var(--gold2);font-weight:700;margin-bottom:18px;text-transform:uppercase}
+.hero h1{font-size:clamp(34px,6vw,60px);font-weight:900;text-shadow:0 4px 24px rgba(0,0,0,.5);margin-bottom:16px}
+.hero p{font-size:clamp(15px,2.2vw,19px);color:#f0e8d8;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.hero .badges{margin-top:28px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hero .badges span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:6px 16px;border-radius:24px;font-size:14px;backdrop-filter:blur(4px)}
+
+/* ===== LAYOUT ===== */
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0 30px}
+.sec-head{text-align:center;margin-bottom:40px}
+.sec-head .tag{display:inline-block;background:var(--nile);color:#fff;font-size:13px;letter-spacing:.25em;padding:4px 16px;border-radius:20px;margin-bottom:12px}
+.sec-head h2{font-size:clamp(26px,4vw,36px);font-weight:900}
+.sec-head p{color:var(--ink2);max-width:640px;margin:10px auto 0}
+
+/* ===== CARDS ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 28px;margin-bottom:22px;box-shadow:0 2px 10px rgba(90,70,40,.06)}
+.card h3{color:var(--nile);font-size:21px;margin-bottom:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}}
+
+/* ===== TABLES ===== */
+table{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border-radius:10px;overflow:hidden}
+th{background:var(--nile);color:#fff;text-align:left;padding:10px 14px;font-weight:500}
+td{padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.table-scroll{overflow-x:auto;border-radius:10px;box-shadow:0 2px 8px rgba(90,70,40,.08);margin:14px 0}
+
+/* ===== DAY TIMELINE ===== */
+.day{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:30px;overflow:hidden;box-shadow:0 3px 14px rgba(90,70,40,.08)}
+.day .head{display:flex;align-items:center;gap:16px;padding:16px 24px;background:linear-gradient(90deg,var(--nile),var(--nile2));color:#fff;flex-wrap:wrap}
+.day .head .no{font-family:'Noto Serif TC',serif;font-weight:900;font-size:15px;background:var(--gold2);color:#2b2118;border-radius:10px;padding:4px 12px;white-space:nowrap}
+.day .head h3{font-size:19px;font-weight:700;color:#fff}
+.day .head .stay{margin-left:auto;font-size:13px;background:rgba(255,255,255,.16);padding:3px 12px;border-radius:14px}
+.day .body{padding:22px 26px}
+.day .body ul{padding-left:22px}
+.day .body li{margin-bottom:8px}
+.day img.dayimg{width:100%;height:300px;object-fit:cover;display:block}
+@media(max-width:640px){.day img.dayimg{height:200px}}
+
+/* ===== FIGURES ===== */
+figure{margin:18px 0;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(90,70,40,.14);background:#000}
+figure img{width:100%;display:block;max-height:520px;object-fit:cover}
+figcaption{background:var(--ink);color:#d9cba9;font-size:13px;padding:8px 16px;text-align:center}
+.figrow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.figrow figure{margin:0}
+.figrow img{height:260px}
+@media(max-width:700px){.figrow{grid-template-columns:1fr}}
+
+/* ===== GUIDE BLOCKS ===== */
+.spot{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:36px;overflow:hidden;box-shadow:0 3px 14px rgba(90,70,40,.08)}
+.spot .spot-head{padding:20px 28px 6px}
+.spot .spot-head .when{font-size:13px;color:var(--terra);font-weight:700;letter-spacing:.1em}
+.spot .spot-head h3{font-size:24px;color:var(--ink);margin-top:2px}
+.spot .spot-body{padding:6px 28px 26px}
+.spot .spot-body h4{color:var(--nile);margin:20px 0 6px;font-size:17px}
+.spot .spot-body ul{padding-left:22px}
+.spot .spot-body li{margin-bottom:7px}
+.opening{background:linear-gradient(135deg,#fdf6e4,#f8ecd2);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:16px 20px;margin:14px 0;font-family:'Noto Serif TC',serif;font-size:16.5px;color:#4a3a24}
+.opening::before{content:"🎙️ 導遊開場白";display:block;font-size:12.5px;letter-spacing:.2em;color:var(--gold);font-weight:700;font-family:'Noto Sans TC',sans-serif;margin-bottom:6px}
+.story{background:#f2f7f8;border-left:4px solid var(--nile2);border-radius:0 12px 12px 0;padding:14px 20px;margin:14px 0}
+.story b.tt{color:var(--nile);display:block;margin-bottom:4px}
+.punch{background:var(--ink);color:#f3e9d2;border-radius:12px;padding:14px 20px;margin:14px 0;font-family:'Noto Serif TC',serif}
+.punch::before{content:"✨ 導覽金句 ";color:var(--gold2);font-weight:700;font-family:'Noto Sans TC',sans-serif;font-size:13px}
+.warn{background:#fdf0ec;border-left:4px solid var(--terra);border-radius:0 12px 12px 0;padding:12px 18px;margin:14px 0;font-size:15px}
+.tip-chip{display:inline-block;background:var(--sand2);border:1px solid var(--line);border-radius:16px;padding:2px 12px;font-size:13.5px;margin:3px 4px 3px 0}
+
+/* ===== CHECKLIST ===== */
+.check li{list-style:none;padding:10px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:8px;display:flex;gap:10px;align-items:flex-start}
+.check li::before{content:"☐";color:var(--terra);font-size:19px;line-height:1.4}
+.check li.hot{border-color:var(--terra);background:#fdf3ee}
+
+footer{background:var(--ink);color:#c9b992;text-align:center;padding:44px 20px;margin-top:60px;font-size:14px;line-height:2}
+footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--gold2)}
+.divider{text-align:center;color:var(--gold);font-size:20px;letter-spacing:.6em;padding:8px 0 0}
+@media print{nav{display:none}.hero{min-height:40vh}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#overview">總覽</a>
+  <a href="#days">每日行程</a>
+  <a href="#practical">交通實用</a>
+  <a href="#basics">導遊必修</a>
+  <a href="#cairo">開羅・吉薩</a>
+  <a href="#aswan">亞斯文・遊輪</a>
+  <a href="#luxor">路克索・紅海</a>
+  <a href="#checklist">待辦清單</a>
+</nav>
+
+<header class="hero">
+  <div class="inner">
+    <div class="eyebrow">EGYPT FAMILY TRIP</div>
+    <h1>埃及自由行手冊</h1>
+    <p>2026.9.25 – 10.11 ｜ 開羅・吉薩 → 黑白沙漠 → 阿布辛貝 → 尼羅河遊輪 → 路克索 → 紅海<br>自己當導遊，走進五千年。</p>
+    <div class="badges"><span>🛫 17 天 14 晚</span><span>🏺 12+ 世界級遺蹟</span><span>🏜️ 沙漠露營 1 晚</span><span>🚢 遊輪 3 晚</span><span>🏖️ 紅海 3 晚</span></div>
+  </div>
+</header>
+
+<!-- ================= 總覽 ================= -->
+<section id="overview"><div class="wrap">
+  <div class="sec-head"><span class="tag">OVERVIEW</span><h2>行程總覽</h2>
+  <p>埃及比台灣<b>慢 5 小時</b>（此期間為 UTC+3）。行程骨架：開羅/吉薩＋GEM → <b>黑白沙漠 2天1夜</b> → 開羅市區（NMEC＋可汗卡利利） → <b>阿布辛貝過夜</b> → 遊輪 3 晚 → 路克索 2 晚 → 紅海 3 晚。</p></div>
+
+  <div class="grid2">
+    <div class="card"><h3>✈️ 國際航班（已訂）</h3>
+      <div class="table-scroll"><table>
+        <tr><th>日期</th><th>航段</th><th>時間</th></tr>
+        <tr><td>9/25</td><td>TPE → SIN</td><td>08:05 – 12:35</td></tr>
+        <tr><td>9/25</td><td>SIN → AUH</td><td>21:10 – 00:30+1</td></tr>
+        <tr><td>9/26</td><td>AUH → CAI</td><td>02:40 – 05:25</td></tr>
+        <tr><td>10/10</td><td>CAI → AUH</td><td>15:00 – 19:30</td></tr>
+        <tr><td>10/10</td><td>AUH → SIN</td><td>21:20 – 09:15+1</td></tr>
+        <tr><td>10/11</td><td>SIN → TPE</td><td>13:45 – 18:35</td></tr>
+      </table></div>
+    </div>
+    <div class="card"><h3>🏨 住宿一覽</h3>
+      <div class="table-scroll"><table>
+        <tr><th>日期</th><th>住宿</th><th>狀態</th></tr>
+        <tr><td>9/26–9/27</td><td>Soul Pyramids View（吉薩）</td><td>已訂 ✅</td></tr>
+        <tr><td>9/28</td><td><b>B&amp;W Sahara Sky Camp</b>（黑白沙漠豪華露營，獨立衛浴）</td><td><b style="color:#a4552e">未訂</b></td></tr>
+        <tr><td>9/29–9/30</td><td><b>Eileen Hotel</b>（開羅市區）</td><td><b style="color:#a4552e">未訂</b></td></tr>
+        <tr><td>10/1</td><td>阿布辛貝（建議 Seti Abu Simbel Lake Resort / Eskaleh）</td><td><b style="color:#a4552e">未訂</b></td></tr>
+        <tr><td>10/2–10/4</td><td>MS Chateau Lafayette 遊輪</td><td>已訂 ✅（週五亞斯文出發 3 晚）</td></tr>
+        <tr><td>10/5–10/6</td><td>Steigenberger Resort Achti（路克索）</td><td>已訂 ✅</td></tr>
+        <tr><td>10/7–10/9</td><td>紅海（建議洪加達 / El Gouna 全包式）</td><td><b style="color:#a4552e">未訂</b></td></tr>
+      </table></div>
+    </div>
+  </div>
+  <figure><img src="images/nile_cruise.jpg" alt="尼羅河遊輪"><figcaption>尼羅河遊輪 —— 10/2 週五中午於亞斯文登上 MS Chateau Lafayette，10/5 週一早上路克索下船</figcaption></figure>
+</div></section>
+
+<!-- ================= 每日行程 ================= -->
+<section id="days"><div class="wrap">
+  <div class="sec-head"><span class="tag">ITINERARY</span><h2>每日行程</h2>
+  <p>固定節奏：<b>早出發 → 中午回飯店午休 → 傍晚再出門</b>。上埃及正午近 40°C，午休是玩埃及的鐵律。</p></div>
+
+  <div class="day"><div class="head"><span class="no">Day 0</span><h3>9/25（五）出發</h3><span class="stay">✈️ 機上</span></div>
+    <div class="body"><ul>
+      <li>TPE → SIN（新加坡轉機 8.5 小時，可出境逛星耀樟宜或買貴賓室休息）→ AUH。</li>
+      <li>上機前完成：下載開羅/路克索/亞斯文離線地圖、Uber App、<b>換好小面額美金</b>（$1、$5 多換些，簽證費與小費用）。</li>
+    </ul></div></div>
+
+  <div class="day"><div class="head"><span class="no">Day 1</span><h3>9/26（六）抵達開羅・休整日</h3><span class="stay">🏨 Soul Pyramids View</span></div>
+    <div class="body"><ul>
+      <li><b>05:25 抵達開羅機場</b>。入關前於銀行櫃檯買落地簽貼紙：<b>每人 25 美元現金</b>（護照效期需 6 個月以上）。</li>
+      <li>機場辦 SIM（Vodafone/Orange 觀光方案約 USD 10–15），或事先買好 eSIM 落地即上網。</li>
+      <li>07:00 請飯店安排接機（約 USD 20–25，車程 50 分鐘）。寄放行李、補眠 2–3 小時，<b>今天不排重行程</b>。</li>
+      <li>15:00 後：屋頂露台看金字塔喝茶；晚上可從屋頂免費看金字塔聲光秀。早睡調時差。</li>
+    </ul></div></div>
+
+  <div class="day"><img class="dayimg" src="images/sphinx.jpg" alt="人面獅身像">
+    <div class="head"><span class="no">Day 2</span><h3>9/27（日）吉薩金字塔群＋下午 GEM</h3><span class="stay">🏨 Soul Pyramids View</span></div>
+    <div class="body"><ul>
+      <li><b>07:30 開門即入場</b>（涼快、人少、光線好）。從飯店步行 5–10 分鐘到 Sphinx Gate；園區大，建議包車進園代步。</li>
+      <li>順序：大金字塔（內部自選，通道低矮陡峭，量力而為）→ 卡夫拉、孟卡拉 → 全景觀景台（三塔同框＋自選駱駝）→ 人面獅身像。</li>
+      <li>12:00 午餐 9 Pyramids Lounge（景觀第一，需預約）。</li>
+      <li><b>14:00 GEM 大埃及博物館</b>（Uber 15 分鐘；⚠️ 門票只能線上買 tickets.gem.eg，<b>選下午時段</b>，現場不售票）：大階梯 → 圖坦卡門全集 → 拉美西斯巨像，約 3–4 小時，館內冷氣足、有電梯。</li>
+      <li><b>晚餐：Khufu's</b>（金字塔景觀的精緻埃及菜，需預約；就在吉薩園區旁，回飯店近）。</li>
+      <li>門票：園區約 EGP 700／大金字塔內部另購約 EGP 900–1,500（<b>只收信用卡</b>）。</li>
+    </ul></div></div>
+
+  <div class="day"><img class="dayimg" src="images/black_desert.jpg" alt="黑沙漠">
+    <div class="head"><span class="no">Day 3</span><h3>9/28（一）黑白沙漠 Day 1 🏜️</h3><span class="stay">🏕️ B&amp;W Sahara Sky Camp（未訂）</span></div>
+    <div class="body"><ul>
+      <li><b>07:00 營地/旅行社到吉薩飯店接</b>（大行李寄放 Soul Pyramids View，<b>只帶一晚過夜包</b>）。</li>
+      <li>車程約 4 小時（370 km）到巴哈利亞綠洲，綠洲午餐。</li>
+      <li>下午換四輪傳動吉普：<b>黑沙漠</b>（火山岩黑丘）→ <b>水晶山</b>（石英水晶山脊）→ <b>阿加巴特山谷</b> → <b>白沙漠國家公園</b>：蘑菇岩、香菇雞岩間看日落。</li>
+      <li>夜宿 <b>B&amp;W Sahara Sky Camp</b>（豪華露營：帳篷房有床、獨立衛浴；晚餐營地供應）。</li>
+      <li><b>重頭戲：沙漠星空</b>（無光害銀河）＋夜訪的沙漠小狐狸。夜間約 15–20°C，帶薄外套。</li>
+    </ul></div></div>
+
+  <div class="day"><img class="dayimg" src="images/white_desert.jpg" alt="白沙漠">
+    <div class="head"><span class="no">Day 4</span><h3>9/29（二）黑白沙漠 Day 2 → 回開羅市區</h3><span class="stay">🏨 Eileen Hotel（未訂）</span></div>
+    <div class="body"><ul>
+      <li>日出時分白沙漠最美（粉金色），<b>早起的人賺到</b>。</li>
+      <li>早餐後回程：巴哈利亞綠洲（可泡溫泉/看鹽湖，視套裝）→ 綠洲午餐 → 車程 4 小時回開羅。</li>
+      <li>回程順路回吉薩 Soul Pyramids View <b>取寄放行李</b> → 約 17:00–18:00 入住<b>開羅市區 Eileen Hotel</b>（9/29–30 兩晚，<b>未訂</b>）。</li>
+    </ul></div></div>
+
+  <div class="day"><img class="dayimg" src="images/nmec.jpg" alt="埃及文明博物館">
+    <div class="head"><span class="no">Day 5</span><h3>9/30（三）NMEC＋晚上可汗卡利利</h3><span class="stay">🏨 Eileen Hotel</span></div>
+    <div class="body"><ul>
+      <li>09:00 <b>埃及文明博物館 NMEC</b>（市區出發 Uber 約 20 分鐘，老開羅 Fustat）：鎮館之寶<b>皇家木乃伊廳</b>——拉美西斯二世、塞提一世、哈特謝普蘇特等 20 具法老本人。約 2–2.5 小時。</li>
+      <li>出館後可順訪隔壁<b>科普特老開羅</b>（懸空教堂，30–60 分鐘，自選）。午餐後回飯店午休。</li>
+      <li><b>傍晚：可汗卡利利市集</b>（市區出發車程約 15 分鐘）＋百年咖啡館 El Fishawy 薄荷茶，晚餐 Naguib Mahfouz。</li>
+      <li>回飯店打包（明天進阿布辛貝過夜，遊輪行李一起帶走）。</li>
+    </ul></div></div>
+
+  <div class="day"><img class="dayimg" src="images/abu_simbel.jpg" alt="阿布辛貝">
+    <div class="head"><span class="no">Day 6</span><h3>10/1（四）飛亞斯文 → 阿布辛貝過夜 🌅</h3><span class="stay">🏨 阿布辛貝（未訂）</span></div>
+    <div class="body"><ul>
+      <li><b>訂最早班 EgyptAir CAI → ASW</b>（愈早愈好，例如 06:00–08:00 起飛班次；<b>未訂</b>）。</li>
+      <li>落地後包車直奔阿布辛貝（<b>車程 3.5 小時</b>，包車兩日含隔天回程約 USD 100–140/車，事先請旅行社或飯店安排）。若班機早到，途中可快閃<b>未完成的方尖碑</b>（30 分鐘）。</li>
+      <li>約 14:00 抵達，入住旅館（Seti Abu Simbel Lake Resort 泳池花園面納賽爾湖／Eskaleh 努比亞生態旅館有名的家常菜）。</li>
+      <li><b>15:30–18:00 悠閒參觀大小神殿</b>（日行團 13:00 前就撤了，下午幾乎包場）。</li>
+      <li><b>19:00 聲光秀</b>（投影在神殿立面上講拉美西斯的故事，先跟旅館確認當晚場次）。</li>
+      <li>過夜版優勢：不用凌晨 3 點起床、神殿看兩次、包場感受。</li>
+    </ul></div></div>
+
+  <div class="day"><img class="dayimg" src="images/philae.jpg" alt="費萊神殿">
+    <div class="head"><span class="no">Day 7</span><h3>10/2（五）阿布辛貝清晨 → 回亞斯文登船</h3><span class="stay">🚢 MS Chateau Lafayette</span></div>
+    <div class="body"><ul>
+      <li>想再看一次的人：<b>06:00 開門再進神殿</b>（清晨光線直射立面最金黃，日行團 8 點後才到）。</li>
+      <li><b>07:30 出發回亞斯文</b>（3.5h）→ 11:00 抵達碼頭。</li>
+      <li><b>12:00 登上 MS Chateau Lafayette</b>，13:00 船上午餐。14:00 隨船參觀<b>費萊神殿＋亞斯文高壩</b>。</li>
+      <li>晚上努比亞歌舞秀，夜泊亞斯文。登船時確認：岸上觀光、門票、英文導遊是否含在船費內。</li>
+    </ul></div></div>
+
+  <div class="day"><img class="dayimg" src="images/kom_ombo.jpg" alt="孔翁波神殿">
+    <div class="head"><span class="no">Day 8</span><h3>10/3（六）遊輪：孔翁波＋艾德夫</h3><span class="stay">🚢 MS Chateau Lafayette</span></div>
+    <div class="body"><ul>
+      <li>上午 <b>孔翁波雙神殿</b>（鱷魚神＋鷹神，附鱷魚木乃伊博物館）→ 船上午餐 → 下午 <b>艾德夫荷魯斯神殿</b>（碼頭搭馬車前往，先確認費用是否含在船費）。</li>
+      <li>傍晚甲板下午茶，看兩岸五千年不變的農村風景。</li>
+    </ul></div></div>
+
+  <div class="day"><img class="dayimg" src="images/karnak.jpg" alt="卡納克神殿">
+    <div class="head"><span class="no">Day 9</span><h3>10/4（日）艾斯納船閘 → 路克索</h3><span class="stay">🚢 MS Chateau Lafayette</span></div>
+    <div class="body"><ul>
+      <li>上午到甲板看<b>船過艾斯納船閘</b>（船搭電梯降 8 公尺＋小販高空拋物賣長袍，很精彩）。</li>
+      <li>下午抵路克索，隨船參觀<b>卡納克神殿</b>。夜泊路克索。</li>
+    </ul></div></div>
+
+  <div class="day"><img class="dayimg" src="images/vok_tomb.jpg" alt="帝王谷陵墓">
+    <div class="head"><span class="no">Day 10</span><h3>10/5（一）下船・路克索西岸</h3><span class="stay">🏨 Steigenberger Achti</span></div>
+    <div class="body"><ul>
+      <li>08:00 下船後直接<b>包車西岸半日</b>（約 USD 40–50）：帝王谷（加購 KV9 必看）→ 哈特謝普蘇特女王神殿 → 曼儂巨像。</li>
+      <li>13:00 入住 Steigenberger Achti，下午泳池畔躲太陽；傍晚河畔夕陽或搭 Felucca 風帆船。</li>
+    </ul></div></div>
+
+  <div class="day"><img class="dayimg" src="images/balloon.jpg" alt="路克索熱氣球">
+    <div class="head"><span class="no">Day 11</span><h3>10/6（二）熱氣球＋路克索神殿夜遊</h3><span class="stay">🏨 Steigenberger Achti</span></div>
+    <div class="body"><ul>
+      <li>04:30 <b>熱氣球</b>（自選強推，約 USD 60–100/人）：日出飛越帝王谷。不參加者睡飽。</li>
+      <li>下午：路克索博物館（冷氣好、小而精）或補逛卡納克。</li>
+      <li>日落後<b>路克索神殿夜遊</b>——全埃及打燈最美的神殿。晚餐推薦老宅餐廳 Sofra。</li>
+    </ul></div></div>
+
+  <div class="day"><img class="dayimg" src="images/red_sea.jpg" alt="紅海吉夫頓島">
+    <div class="head"><span class="no">Day 12</span><h3>10/7（三）路克索 → 紅海</h3><span class="stay">🏖️ 紅海度假村（未訂）</span></div>
+    <div class="body"><ul>
+      <li>09:00 <b>包車前往洪加達</b>（290km，4 小時，約 USD 70–90，沿途檢查哨屬正常）。</li>
+      <li>14:00 入住度假村（建議<b>全包式</b>：El Gouna 高級悠閒／Soma Bay 安靜／Hurghada 市區方便）。下午沙灘放空。</li>
+    </ul></div></div>
+
+  <div class="day"><div class="head"><span class="no">Day 13–14</span><h3>10/8–10/9（四–五）紅海度假</h3><span class="stay">🏖️ 紅海度假村</span></div>
+    <div class="body"><ul>
+      <li>10/8：<b>吉夫頓島／Orange Bay 出海一日</b>（白沙洲＋浮潛，含午餐約 USD 30–50/人；不下水的人在船上與沙洲休息）。</li>
+      <li>10/9：全放空——沙灘、SPA、玻璃底船（不下水也能看珊瑚）。傍晚逛 Hurghada Marina。晚上打包、確認早班機。</li>
+    </ul></div></div>
+
+  <div class="day"><div class="head"><span class="no">Day 15–16</span><h3>10/10–10/11 返程</h3><span class="stay">✈️ 機上</span></div>
+    <div class="body"><ul>
+      <li><b>10/10 一早 HRG → CAI</b>（未訂，務必選最早班 06:30–08:00 起飛；國際線 15:00 起飛需 12:00 前抵達報到）。</li>
+      <li>備案：10/9 傍晚先飛回開羅住機場旁 Le Méridien（空橋直達航廈），10/10 最從容。</li>
+      <li>15:00 CAI → AUH → SIN → 10/11 18:35 抵台北 🇹🇼</li>
+    </ul></div></div>
+</div></section>
+
+<div class="divider">𓂀 𓁢 𓋹 𓊝</div>
+
+<!-- ================= 交通實用 ================= -->
+<section id="practical"><div class="wrap">
+  <div class="sec-head"><span class="tag">PRACTICAL</span><h2>交通・包車・實用資訊</h2></div>
+
+  <div class="card"><h3>🚗 交通策略</h3>
+    <div class="table-scroll"><table>
+      <tr><th>區段</th><th>方式</th><th>說明</th></tr>
+      <tr><td>開羅／吉薩短程</td><td>Uber / Careem</td><td>便宜普及不用議價（吉薩→GEM 約 EGP 100–150），上車核對車牌</td></tr>
+      <tr><td>吉薩一日遊</td><td>包車</td><td>薩卡拉等景點無大眾運輸，包車是唯一合理選項</td></tr>
+      <tr><td>開羅→亞斯文</td><td>國內線飛機</td><td>1.5h；夜臥火車要 13h，太累不划算</td></tr>
+      <tr><td>亞斯文→路克索</td><td>遊輪（已訂）</td><td>—</td></tr>
+      <tr><td>路克索→洪加達</td><td>包車</td><td>4h，請飯店或遊輪櫃檯安排</td></tr>
+      <tr><td>洪加達→開羅</td><td>國內線飛機</td><td>1h，選最早班</td></tr>
+    </table></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><h3>🤝 包車怎麼找（優先順序）</h3><ul style="padding-left:22px">
+      <li><b>① 請住宿飯店安排（最推薦）</b>——Soul Pyramids View 這類民宿日常業務就是排包車，入住第一天把接機、吉薩園區代步等包車需求一次談好，整包有折扣。</li>
+      <li><b>② Klook / GetYourGuide / Viator</b>——中文介面、可刷卡、有評價可取消；也可直接訂「含英文導遊」版，你再翻成中文。</li>
+      <li>③ 開羅市區用 Uber 預約功能。</li>
+      <li>④ 指定<b>有冷氣的廂型車</b>（Hiace / H1），行李多、上下車都方便。</li>
+    </ul></div>
+    <div class="card"><h3>💵 包車行情（整車價）</h3><ul style="padding-left:22px">
+      <li>開羅／吉薩全日（8–9h）：<b>USD 50–70</b></li>
+      <li>機場接送 CAI→吉薩：USD 20–25</li>
+      <li>路克索西岸半日：USD 40–50</li>
+      <li>路克索→洪加達單程：USD 70–90</li>
+      <li>亞斯文→阿布辛貝來回（陸路）：USD 80–120</li>
+      <li>司機小費：全日 EGP 200–300（預期禮儀）</li>
+      <li>司機帶去購物站直接說「No shopping today, thank you」即可。</li>
+    </ul></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><h3>🛂 簽證與錢</h3><ul style="padding-left:22px">
+      <li>落地簽 <b>USD 25/人只收美金現金</b>；或事先辦 e-Visa（visa2egypt.gov.eg）。</li>
+      <li>當地 ATM 提領 EGP 最划算，每次 3,000–5,000。</li>
+      <li><b>2026 起主要景點門票一律刷卡</b>；GEM 只能線上購票。帶兩張不同信用卡防鎖卡。</li>
+      <li>小費文化（Baksheesh）：行李員 EGP 20–50、床頭 20/日、廁所 5–10、遊輪服務費約 USD 5–10/人/晚。<b>多備 $1 美金與 EGP 小鈔。</b></li>
+    </ul></div>
+    <div class="card"><h3>🌡️ 天氣與穿著（9 月底–10 月初）</h3><ul style="padding-left:22px">
+      <li>開羅 32–34°C／上埃及白天 <b>38–41°C</b>／紅海水溫 27°C。</li>
+      <li>乾熱：遮陽帽、墨鏡、防曬、輕薄長袖、每人每天 2 公升水。<b>只喝瓶裝水</b>。</li>
+      <li>女性進清真寺備薄圍巾；熱氣球清晨帶薄外套；<b>好走的鞋</b>（神殿全是碎石）。</li>
+    </ul></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><h3>🧡 健康與體力備忘</h3><ul style="padding-left:22px">
+      <li><b>腸胃藥、止瀉藥必備</b>＋電解質粉＋常用藥多帶一週份＋防蚊液。</li>
+      <li>死守「早出 → 午休 → 傍晚出」節奏。</li>
+      <li>帝王谷有小火車、GEM 有電梯輪椅、吉薩可包車進園——體力不用怕，但每天安排坐下喝茶的空檔。</li>
+      <li>旅平險確認涵蓋全員年齡＋海外急難救助。</li>
+    </ul></div>
+    <div class="card"><h3>🛡️ 防騙三招</h3><ul style="padding-left:22px">
+      <li>「這個門今天關了，我帶你走另一邊」→ 假的，直走售票口。</li>
+      <li>主動幫拍照、硬給戴頭巾、塞駱駝繩 → 要小費，微笑搖手走開。</li>
+      <li>市集開價先砍 50–60%，談不攏就走人（常被叫回來）。</li>
+      <li>觀光區治安好、觀光警察多，保持微笑一切好談。</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<div class="divider">𓆣 𓅃 𓁟 𓆙</div>
+
+<!-- ================= 導遊必修 ================= -->
+<section id="basics"><div class="wrap">
+  <div class="sec-head"><span class="tag">GUIDE 101</span><h2>導遊必修：五分鐘看懂古埃及</h2>
+  <p>導覽心法：沒有人記得住年份和人名，<b>記得住的是故事和比喻</b>。每個景點抓 1 個數字、1 個故事、1 個「哇」點就夠。</p></div>
+
+  <div class="card"><h3>📜 三千年只要記「三個王國」</h3>
+    <div class="table-scroll"><table>
+      <tr><th>時期</th><th>年代</th><th>關鍵字</th><th>對應景點</th></tr>
+      <tr><td><b>古王國</b>「金字塔時代」</td><td>前 2686–2181</td><td>首都曼菲斯，全民蓋金字塔</td><td>吉薩、薩卡拉、達舒爾</td></tr>
+      <tr><td><b>新王國</b>「帝國時代」</td><td>前 1550–1069</td><td>首都底比斯（路克索），改挖秘密陵墓</td><td>卡納克、帝王谷、阿布辛貝</td></tr>
+      <tr><td><b>托勒密王朝</b>（希臘人）</td><td>前 305–30</td><td>亞歷山大部將的後代，末代=埃及豔后</td><td>費萊、孔翁波、艾德夫</td></tr>
+    </table></div>
+    <div class="punch">「北邊開羅看最老的金字塔時代，南邊路克索看最強的帝國時代；遊輪沿路的神殿反而最『年輕』——是希臘人蓋的，所以保存最好。」另一句必得掌聲的：「<b>豔后看金字塔，就像我們看秦始皇——金字塔對她已是 2,500 年的古蹟。</b>」</div>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><h3>👑 必認識的四位法老</h3><ul style="padding-left:22px">
+      <li><b>古夫</b>：大金字塔主人，傳世雕像卻只有 7.5 公分。</li>
+      <li><b>哈特謝普蘇特</b>：最成功的女法老，戴假鬍子男裝統治 20 年，死後被繼子「官方抹除」。</li>
+      <li><b>圖坦卡門</b>：成就最小、名氣最大——因為他的墓是唯一沒被盜的。</li>
+      <li><b>拉美西斯二世</b>：埃及的秦皇漢武，在位 67 年、子女破百、狂蓋巨像。全程玩「找拉美西斯」遊戲。</li>
+    </ul></div>
+    <div class="card"><h3>𓅃 九位神明小抄</h3><ul style="padding-left:22px">
+      <li><b>拉 Ra</b>：鷹頭頂太陽盤，每天搭船載太陽過天空。</li>
+      <li><b>阿蒙 Amun</b>：帝國守護神，卡納克是他家。</li>
+      <li><b>歐西里斯</b>：綠臉木乃伊裝，冥界之王（綠=重生）。</li>
+      <li><b>伊西斯</b>：他的妻子，魔法女神，費萊神殿主人。</li>
+      <li><b>荷魯斯</b>：鷹頭，其子；每位法老都自稱他的化身。</li>
+      <li><b>阿努比斯</b>：胡狼頭，木乃伊與墓地守護神。</li>
+      <li><b>賽特 Set</b>：謎樣獸頭，沙漠與混亂之神——歐西里斯故事的反派。</li>
+      <li><b>圖特 Thoth</b>：朱鷺頭，智慧與文字之神，眾神的書記官。</li>
+      <li><b>哈索爾 Hathor</b>：牛角夾太陽盤，愛與音樂女神，常以母牛形象出現——女王神殿裡找得到她。</li>
+    </ul></div>
+  </div>
+
+  <div class="card"><h3>⚰️ 核心神話：歐西里斯傳說（遊輪上講最應景）</h3>
+    <div class="story">賢王歐西里斯被嫉妒的弟弟賽特設局：宴會上拿出華美棺木說「誰躺進去剛好就送誰」，歐西里斯一躺，賽特立刻釘棺丟進尼羅河，再把屍體剁成 14 塊撒遍埃及。妻子伊西斯走遍全國拼回丈夫，用魔法讓他短暫復活並懷了荷魯斯。歐西里斯成為冥界之王；荷魯斯長大後與叔叔大戰為父報仇，戰鬥中失去一眼——復原後那隻眼成了護身符「<b>荷魯斯之眼</b>」（紀念品店到處都是，講完再帶大家去買）。<br><b>這故事解釋了一切：</b>法老活著是荷魯斯、死了變歐西里斯；埃及人為何相信復活、為何做木乃伊。</div>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><h3>🧻 木乃伊與死後審判</h3><ul style="padding-left:22px">
+      <li>靈魂夜裡要回肉身休息，肉身壞了就無家可歸——所以做木乃伊。</li>
+      <li>製作 70 天：內臟裝罈（心臟留體內；<b>腦子被認為沒用，用鉤子從鼻孔掏出丟掉</b>——聽的人必皺眉，效果極佳）。</li>
+      <li><b>秤心審判</b>：阿努比斯把心臟與「真理羽毛」比重，心太重（罪多）就被鱷魚頭怪獸吃掉。墓裡壁畫找「天秤」！</li>
+      <li>有錢人陪葬「心臟聖甲蟲」刻咒語叫心臟閉嘴——<b>古埃及人連神都想作弊</b>。</li>
+    </ul></div>
+    <div class="card"><h3>🏛️ 看懂神殿（一套公式走遍全埃及）</h3><ul style="padding-left:22px">
+      <li>① <b>塔門</b>：山字形巨牆，必刻「法老揪敵髮作勢砍殺」的政治看板。</li>
+      <li>② 露天中庭：百姓最遠只能到這。</li>
+      <li>③ <b>多柱廳</b>：柱子模擬創世沼澤的紙莎草。</li>
+      <li>④ <b>至聖所</b>：最深處小黑屋，只有法老與大祭司能進。</li>
+      <li>越往內：地板越高、天花板越低、光線越暗。</li>
+    </ul>
+    <div class="punch">「神殿是一部由亮到暗的電影——從人間走向創世的黑暗原點。」</div></div>
+  </div>
+
+  <div class="card"><h3>𓊨 象形文字 30 秒入門</h3><ul style="padding-left:22px">
+    <li><b>橢圓圈圈＝王名圈（Cartouche）</b>：裡面一定是法老名字。「太陽圓盤 ⊙ 開頭」＝拉美西斯，此行出現率 90%。</li>
+    <li>王名圈被鑿掉＝政治清算現場（女法老篇會用到）。</li>
+    <li>1822 年法國人商博良靠「羅塞塔石碑」破譯——「一顆石頭讓啞了 1,500 年的文明重新開口」。</li>
+    <li>字母小抄：鷹=A、蘆葦=I、獅子=L、貓頭鷹=M、水波=N —— 到紀念品店幫大家「翻譯」名字。</li>
+  </ul></div>
+
+  <div class="card"><h3>🌊 尼羅河（甲板話題）</h3><ul style="padding-left:22px">
+    <li>6,650 公里世界最長，<b>由南向北流</b>——所以「上埃及」在南邊（上游）。</li>
+    <li>希羅多德：「埃及是尼羅河的贈禮。」定期氾濫帶來黑沃土，埃及人自稱國土「黑土地」，沙漠是「紅土地」。氾濫規律到讓他們發明 365 天曆法。</li>
+    <li>96% 國土是沙漠——遊輪上看，<b>綠色只有河岸窄窄一條，一線之外就是死亡沙漠</b>。</li>
+    <li>1970 年高壩建成，五千年的氾濫節奏被按下暫停鍵。</li>
+  </ul></div>
+
+  <div class="grid2">
+    <div class="card"><h3>𓁛 法老小百科</h3><ul style="padding-left:22px">
+      <li><b>雙王冠</b>：白色高帽＝上埃及、紅色平帽＝下埃及，兩頂疊在一起＝統一全國——看雕像的帽子就知道他在宣示什麼。</li>
+      <li>法老有<b>五個頭銜名</b>，王名圈裡裝的是最後兩個——所以同一位法老常看到兩個圈。</li>
+      <li>法老＝<b>活著的荷魯斯</b>：不是「神的代理人」，是神本人下凡上班，政教一把抓。</li>
+      <li>下巴的<b>假鬍子</b>是綁上去的配件——神的標準配備，連女法老哈特謝普蘇特都照戴。</li>
+    </ul></div>
+    <div class="card"><h3>🎨 為什麼人都畫成側臉？</h3><ul style="padding-left:22px">
+      <li>「正面律」：頭側面、眼睛正面、肩膀正面、腰腿側面——<b>不是不會畫，是規定</b>。</li>
+      <li>邏輯：壁畫是給靈魂在來世「使用」的，每個部位都要用<b>最能代表它的角度</b>，拼出一個最完整的人。</li>
+      <li>尺寸＝地位：法老畫最大、王后常只到膝蓋、敵人小得像螞蟻——看圖不用識字就能讀出權力關係。</li>
+      <li>所以 3,000 年畫風幾乎不變——不是沒進步，是「神聖公式」不准改。</li>
+    </ul></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><h3>🐈 古埃及日常冷知識</h3><ul style="padding-left:22px">
+      <li><b>貓是聖物</b>：殺貓是死罪；家貓過世全家剃掉眉毛守喪，貓也做成木乃伊厚葬。</li>
+      <li><b>薪水付麵包和啤酒</b>：古埃及啤酒濃稠如粥、低酒精，是全民主食——金字塔是「麵包＋啤酒」蓋出來的。</li>
+      <li><b>男女都畫黑眼線</b>：防曬、防蚊、防眼疾——世界最早的功能性化妝品；剃光頭戴假髮則是為了防蝨子。</li>
+      <li><b>女性地位領先同代三千年</b>：可以擁有財產、簽約、經商、離婚、繼承——同時期的希臘女性都沒這待遇。</li>
+      <li><b>一年三季</b>：氾濫、播種、收成，每季 4 個月共 365 天——我們手機裡的日曆，就是它經羅馬改版的後代。</li>
+    </ul></div>
+    <div class="card"><h3>⚡ 快問快答彈藥庫</h3><ul style="padding-left:22px">
+      <li><b>Q：金字塔是外星人蓋的吧？</b>——工人村、麵包坊、醫療紀錄、塗鴉隊名全挖出來了，是領薪水的埃及人蓋的。「別讓外星人搶走人類最偉大的成就。」</li>
+      <li><b>Q：木乃伊為什麼不會爛？</b>——泡鹼（天然鹽）脫水 70 天＋沙漠乾燥氣候。同樣原理：鹹魚。</li>
+      <li><b>Q：金字塔裡有寶藏嗎？</b>——幾千年前就被盜光了；寶藏如今都在博物館，墓室裡只剩一口空石棺。</li>
+      <li><b>Q：後來為什麼不蓋金字塔了？</b>——太招搖，等於在沙漠裡立「寶藏在此」的路標；新王國改把陵墓藏進帝王谷——然後還是被盜。</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<div class="divider">𓉐 𓉴 𓊖 𓉑</div>
+
+<!-- ================= 開羅吉薩 ================= -->
+<section id="cairo"><div class="wrap">
+  <div class="sec-head"><span class="tag">CAIRO・GIZA</span><h2>導覽手冊：開羅・吉薩</h2><p>9/27 – 9/30</p></div>
+
+  <div class="spot">
+    <figure style="margin:0;border-radius:0"><img src="images/giza.jpg" alt="吉薩金字塔群"></figure>
+    <div class="spot-head"><div class="when">DAY 2・9/27</div><h3>吉薩金字塔群 & 人面獅身像</h3></div>
+    <div class="spot-body">
+      <div class="opening">「各位，眼前這座建築完工於 <b>4,500 年前</b>，之後長達 <b>3,800 年</b>都是全世界最高的人造建築。古代世界七大奇蹟，它是最老的一個，也是<b>唯一還存在的一個</b>。」</div>
+      <h4>大金字塔數字彈藥庫</h4>
+      <ul>
+        <li>原高 146.6 公尺；底邊各 230 公尺，誤差<b>只有 4.4 公分</b>；四面對準東西南北誤差 0.06 度。</li>
+        <li>約 <b>230 萬塊石頭</b>、平均每塊 2.5 噸——工期 20 年的話，<b>平均每 2–3 分鐘放好一塊</b>。</li>
+        <li><b>不是奴隸蓋的！</b>考古找到工人村、麵包坊、啤酒坊：工人領薪（麵包+啤酒+洋蔥）、有醫療、輪班制，還留隊名塗鴉「古夫醉漢隊」。死去工人葬在金字塔旁——奴隸不可能有此殊榮。</li>
+        <li>為什麼是金字塔形？①模擬陽光從雲間灑下的光梯；②模擬創世神話最先浮出混沌之水的「原初之丘」。</li>
+      </ul>
+      <h4>三座怎麼分辨</h4>
+      <ul>
+        <li><b>古夫</b>最大；<b>卡夫拉</b>頂部留著一圈白色原始外殼——「想像整座貼滿拋光白石灰岩、像一面巨鏡」；<b>孟卡拉</b>只有約 1/10 體積，國力衰退肉眼可見。南側大裂口是 12 世紀有人想拆金字塔——拆了 8 個月只拆出一道疤，放棄。</li>
+      </ul>
+      <h4>人面獅身像</h4>
+      <ul>
+        <li>長 73 公尺，<b>一整塊天然岩床雕成</b>，世界最大單體石雕。</li>
+        <li><b>鼻子去哪了？</b>拿破崙砲轟是冤案（更早的畫就沒鼻子了）；史載 14 世紀一位狂熱者見民眾向它獻祭而怒鑿其鼻。</li>
+        <li><b>記夢碑</b>：王子圖特摩斯四世午睡夢見獅身像說「把沙清掉，我讓你當法老」——照做後真的登基。3,400 年前的「廣告置入」：他本非第一繼承人，用神諭造勢。</li>
+      </ul>
+      <div class="warn">⚠️ 大金字塔內部：通道低矮陡峭、悶熱、牆上無壁畫，重頭戲是 47 公尺長的<b>大迴廊</b>與花崗岩墓室——想「走進 4,500 年前的工程心臟」值得進一次；幽閉恐懼或膝蓋不適者建議跳過，票價較親民的孟卡拉金字塔內部是替代選項。騎駱駝先講好價（約 EGP 350–500/15 分鐘）。</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="figrow" style="padding:0"><figure style="border-radius:0"><img src="images/gem.jpg" alt="大埃及博物館"></figure><figure style="border-radius:0"><img src="images/tut_mask.jpg" alt="圖坦卡門黃金面具"></figure></div>
+    <div class="spot-head"><div class="when">DAY 2・9/27 下午</div><h3>大埃及博物館 GEM</h3></div>
+    <div class="spot-body">
+      <div class="opening">「全世界最大的單一文明博物館：蓋了 20 年、花超過 10 億美金。鎮館之寶是圖坦卡門 5,398 件陪葬品——<b>史上第一次全部同室展出</b>。」</div>
+      <div class="warn">⚠️ 門票只能線上買 tickets.gem.eg（<b>選下午時段</b>），現場不售票。館內冷氣足、有電梯，約 3–4 小時。晚餐 <b>Khufu's</b>（金字塔景觀的精緻埃及菜，需預約）。</div>
+      <h4>排隊時講：世紀開棺故事</h4>
+      <div class="story"><b class="tt">1922.11.26</b> 英國人<b>霍華德・卡特</b>在帝王谷挖了 15 年一無所獲，金主已下最後通牒。一個送水男孩用棍子插沙固定水罐，戳到一級石階……卡特在墓門鑿開小孔舉燭窺看，身後伯爵忍不住問：「看到什麼了嗎？」卡特說出考古史最有名的一句話：<b>「看到了，是奇妙的東西。（Yes, wonderful things.）」</b><br>「法老的詛咒」？開墓五個月後金主病逝，媒體瘋炒；但<b>卡特本人平安活到 64 歲</b>——最該被詛咒的人沒事，故事不攻自破。（講完再進展廳，氣氛滿分）</div>
+      <h4>必看清單</h4>
+      <ul>
+        <li><b>黃金面具</b>：11 公斤純金，注意耳洞——可能原為女性/孩童設計。</li>
+        <li>三層人形金棺（最內層 110 公斤純金）、<b>黃金王座</b>（椅背上王后為少年法老抹油的日常瞬間）、<b>隕鐵匕首</b>（鐵器時代之前的鐵，來自天上）。</li>
+        <li><b>大廳拉美西斯二世巨像</b>：83 噸，2006 年以時速 5 公里直立遊街 10 小時搬來，全城夾道送行。每年 2/21、10/21 朝陽會正照他的臉——向阿布辛貝的原版採光致敬。</li>
+        <li><b>大階梯頂端落地窗正對金字塔</b>——全館最佳拍照點。太陽船館（另購票）：古夫的 4,500 年雪松船。</li>
+      </ul>
+      <p style="margin-top:10px">圖坦卡門本人：9 歲登基、19 歲死因成謎（瘧疾＋腿傷感染是主流說法）；其父是搞一神教改革的「異端法老」阿肯那頓——這條線到卡納克還會接上。</p>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="figrow" style="padding:0"><figure style="border-radius:0"><img src="images/black_desert.jpg" alt="黑沙漠"></figure><figure style="border-radius:0"><img src="images/white_desert.jpg" alt="白沙漠"></figure></div>
+    <div class="spot-head"><div class="when">DAY 3–4・9/28–9/29</div><h3>黑白沙漠 —— 撒哈拉兩天一夜</h3></div>
+    <div class="spot-body">
+      <div class="opening">「接下來兩天我們離開尼羅河，深入撒哈拉。很多人不知道：<b>撒哈拉不是一直都是沙漠</b>——一萬年前這裡是綠色草原，有河流、長頸鹿、大象。大約六千年前氣候變乾，人們被迫遷往一條大河谷——<b>那條河就是尼羅河，那批人就是後來蓋金字塔的埃及人</b>。可以說，是撒哈拉的死亡，生出了埃及文明。」（車程 4 小時，故事在車上慢慢說）</div>
+      <h4>巴哈利亞綠洲 Bahariya</h4>
+      <ul>
+        <li>沙漠中的椰棗與橄欖園，羅馬時代就是酒鄉。</li>
+        <li><b>黃金木乃伊谷</b>：1996 年一頭驢子踩空跌進洞裡，挖開一看——<b>上萬具希臘羅馬時期的鍍金木乃伊</b>沉睡地下，埃及近代最大考古發現之一（部分在綠洲小博物館展出，路過可看）。</li>
+      </ul>
+      <h4>吉普路線四大地貌</h4>
+      <ul>
+        <li><b>黑沙漠</b>：一望無際的錐形黑丘——遠古火山噴出的黑色玄武岩碎屑覆蓋橘色沙丘，像「撒了一層黑芝麻的布丁山」。爬上小丘俯瞰 360 度黑色山海（坡短，慢慢走都上得去）。</li>
+        <li><b>水晶山</b>：閃閃發光的石英水晶山脊，陽光下像碎鑽。冷知識：它是築路工人<b>開路時不小心炸出來的</b>。只能看不能帶（保護區）。</li>
+        <li><b>阿加巴特山谷</b>：白色石灰岩峰群從金色沙海拔起，全線最戲劇性的地貌；吉普在沙丘間衝浪——想刺激跟司機說 faster，想穩跟司機說 slowly。</li>
+        <li><b>白沙漠（重頭戲）</b>：「各位現在站在 <b>8,000 萬年前的海底</b>——這些白色岩石是白堊，跟英國多佛白崖同樣的東西。」找經典造型岩：蘑菇岩、香菇雞、兔子岩、駱駝岩——大家一起玩「這塊像什麼」。地上可找海膽、貝殼化石（看了放回去）。</li>
+      </ul>
+      <figure><img src="images/white_desert2.jpg" alt="白沙漠日落"><figcaption>白沙漠 —— 日落時白岩被染成粉紅→橘金→紫，日出的粉金色更是兩天中最美的時刻</figcaption></figure>
+      <ul>
+        <li><b>晚上</b>：無光害滿天銀河；營地晚餐後常有<b>沙漠小狐狸</b>來討食——世界上最萌的不速之客。</li>
+        <li><b>日出</b>：粉金色的白沙漠是兩天中最美的時刻，值得早起。</li>
+      </ul>
+      <div class="warn">🎒 帶：薄外套（夜 15–20°C）、手電筒/頭燈、濕紙巾、行動電源（營地電力有限）、暈車藥（吉普路段顛）。大行李寄放吉薩飯店，只帶一晚過夜包。沙漠中大多無手機訊號——出發前跟家人說好失聯一晚。</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <figure style="margin:0;border-radius:0"><img src="images/nmec.jpg" alt="埃及文明博物館 NMEC"></figure>
+    <div class="spot-head"><div class="when">DAY 5・9/30 上午</div><h3>埃及文明博物館 NMEC —— 皇家木乃伊廳</h3></div>
+    <div class="spot-body">
+      <div class="opening">「今天早上我們來『面聖』——不是看雕像，是看<b>法老本人</b>。拉美西斯二世的雕像我們一路看了好幾座，今天要見他本人：3,300 年前統治埃及 67 年的那位老人，就躺在樓下。」</div>
+      <ul>
+        <li>20 具皇家木乃伊：<b>拉美西斯二世、塞提一世（保存最美，像睡著的老紳士）、圖特摩斯三世、哈特謝普蘇特</b>……新王國最強法老幾乎到齊。</li>
+        <li><b>哈特謝普蘇特的認親</b>：她的木乃伊 2007 年才靠一顆裝在小木盒裡的<b>牙齒</b>確認身分。10/5 到她的神殿時會再講她的故事，先在這裡見本人。</li>
+        <li>廳內莊嚴如陵墓、禁止拍照——提醒大家安靜參觀，「當作謁陵」。</li>
+      </ul>
+      <div class="story"><b class="tt">2021 年「法老黃金遊行」</b>22 具木乃伊從塔利爾廣場老博物館搬來這裡：每具乘專屬金色戰車花車、全程軍禮、全國直播、萬人空巷——「埃及人幫 3,000 歲的國王辦了一場國葬等級的搬家」。前一晚先看影片（YouTube 搜 Pharaohs' Golden Parade），現場更有感。</div>
+      <div class="story"><b class="tt">拉美西斯二世的護照</b>1976 年他的木乃伊需要飛巴黎搶救性維修，法國規定入境者需持護照——埃及真的幫他辦了一本，職業欄寫「<b>國王（已歿）</b>」；抵達巴黎時法國以<b>元首軍禮</b>迎接。「史上唯一持護照出國的木乃伊。」</div>
+      <ul>
+        <li>NMEC 在老開羅 Fustat，市區飯店出發 Uber 約 20 分鐘；出館可順訪隔壁<b>科普特老開羅</b>（懸空教堂，30–60 分鐘，自選，導覽內容見文末備用篇）。</li>
+        <li>下午回飯店午休，傍晚出發可汗卡利利市集（市區出發約 15 分鐘）。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="spot">
+    <figure style="margin:0;border-radius:0"><img src="images/khan.jpg" alt="可汗卡利利市集"></figure>
+    <div class="spot-head"><div class="when">DAY 5・9/30 晚</div><h3>可汗卡利利市集 Khan el-Khalili</h3></div>
+    <div class="spot-body">
+      <ul>
+        <li>1382 年開業、600 多年的中東大市集：香料、銅燈、水煙、香精、紙莎草畫。</li>
+        <li><b>El Fishawy 咖啡館 200 多年從未打烊</b>，諾貝爾文學獎得主馬哈福茲的靈感基地——點杯薄荷茶（shai bil na'na）；晚餐 Naguib Mahfouz。</li>
+        <li>議價心法（可現場示範）：開價砍半再往下、轉身走人是最強招式。</li>
+        <li>紙莎草辨真假：真品可揉不破、透光有纖維網格；香蕉葉仿品一折就裂。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="figrow" style="padding:0"><figure style="border-radius:0"><img src="images/mohamed_ali.jpg" alt="穆罕默德阿里清真寺"></figure><figure style="border-radius:0"><img src="images/hanging_church.jpg" alt="懸空教堂"></figure></div>
+    <div class="spot-head"><div class="when">備用篇・本次未排入</div><h3>伊斯蘭開羅 & 科普特開羅</h3></div>
+    <div class="spot-body">
+      <div class="warn">v2 行程已割愛伊斯蘭開羅；<b>科普特老開羅可於 9/30 NMEC 出館後順訪</b>（30–60 分鐘，自選）。若臨時想去仍可照著講。</div>
+      <h4>薩拉丁城堡＋穆罕默德・阿里清真寺</h4>
+      <ul>
+        <li><b>薩拉丁</b>：十字軍時代的伊斯蘭英雄，1176 年建城堡；以騎士精神善待俘虜，連對手都尊敬他。</li>
+        <li><b>穆罕默德・阿里</b>（不是拳王）：1811 年邀 470 名政敵入城堡赴宴，宴畢在狹窄坡道全數伏殺——<b>「鴻門宴埃及版」</b>（出城門時指著那條坡道講）。</li>
+        <li>中庭華麗的法國鐘塔：法國用它「回禮」換走路克索神殿門口的方尖碑（今巴黎協和廣場）——<b>而且據說從來沒準過</b>。「一根 3,300 年的方尖碑，換一座壞掉的鐘」——這個哏留到路克索神殿再呼應一次。</li>
+      </ul>
+      <h4>科普特老開羅</h4>
+      <ul>
+        <li>「科普特」＝埃及基督徒；埃及當過約 500 年基督教國家，科普特語是古埃及語的直系後代——<b>教堂吟唱裡還活著法老時代的語言</b>。</li>
+        <li><b>懸空教堂</b>：建在羅馬堡壘塔樓之上；<b>聖塞爾吉烏斯教堂</b>：傳說聖家（約瑟、瑪利亞、襁褓耶穌）避難埃及時住過的洞穴就在地下室。</li>
+        <li><b>班以斯拉猶太會堂</b>：傳說法老女兒撈起嬰兒摩西之處旁；1896 年在此發現 40 萬件中世紀文件的「開羅藏經庫」。</li>
+      </ul>
+      <div class="punch">「走 500 公尺，穿過法老、基督、猶太、伊斯蘭四個文明——這就是開羅。」</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="figrow" style="padding:0"><figure style="border-radius:0"><img src="images/saqqara.jpg" alt="階梯金字塔"></figure><figure style="border-radius:0"><img src="images/bent.jpg" alt="彎曲金字塔"></figure></div>
+    <div class="spot-head"><div class="when">備用篇・本次未排入</div><h3>薩卡拉・達舒爾・曼菲斯 —— 金字塔演進史</h3></div>
+    <div class="spot-body">
+      <div class="warn">v2 行程為了黑白沙漠割愛了這條「金字塔演進史」路線，篇章保留當備用——若臨時想去仍可照著講。</div>
+      <div class="opening">「吉薩看的是金字塔的『完成版』，這裡回到過去看『第一次』——階梯金字塔是全世界第一座金字塔，也是<b>人類史上第一座大型石造建築</b>。在它之前，全人類蓋房子只用泥磚和木頭。」</div>
+      <h4>薩卡拉：階梯金字塔與天才伊姆霍特普</h4>
+      <ul>
+        <li>宰相<b>伊姆霍特普</b>本來只是蓋傳統平頂墓，蓋一層想想不夠再疊一層……疊了六層——<b>一次工程加碼史改變了建築史</b>。</li>
+        <li>他是史上第一位留名建築師，死後被封為醫藥之神——<b>平民封神，埃及史上僅此一人</b>。</li>
+        <li>貴族墓壁畫＝4,300 年前的生活漫畫：捕魚、釀酒、強迫餵鵝（肥肝 4,000 年前就有了）。請大家找「農夫扛小牛過河、母牛回頭焦急看」——金字塔展示帝王的偉大，這裡展示古埃及人的可愛。</li>
+      </ul>
+      <h4>達舒爾：試錯之王斯尼夫魯</h4>
+      <ul>
+        <li>古夫的爸爸蓋了三座大金字塔，總量比兒子還多。<b>彎曲金字塔</b>：蓋一半發現 54° 太陡會裂，緊急改 43°——一次刻在 105 公尺石頭上的工程失誤。</li>
+        <li><b>紅色金字塔</b>：記取教訓的成功之作＝人類第一座完美金字塔。可體驗進金字塔內部（15 公尺高疊澀墓室，人少）。膝蓋不好者量力：下坡需半蹲 60 公尺。</li>
+      </ul>
+      <div class="figrow"><figure><img src="images/red_pyramid.jpg" alt="紅色金字塔"><figcaption>紅色金字塔 —— 人類第一座「完美」金字塔</figcaption></figure><figure><img src="images/memphis.jpg" alt="曼菲斯拉美西斯二世巨像"><figcaption>曼菲斯 —— 拉美西斯二世 10 公尺躺像</figcaption></figure></div>
+      <h4>曼菲斯：消失的首都</h4>
+      <ul>
+        <li>當了千年「世界最大城市」，如今只剩椰棗林間的露天博物館——泥磚給活人、石頭給死人，所以留下來的全是墓和神殿。</li>
+        <li><b>拉美西斯二世 10 公尺躺像</b>：看腰帶上的王名圈，教大家認「太陽圓盤開頭＝拉美西斯」，之後全程通用。</li>
+        <li>彩蛋：「Egypt」一詞來自曼菲斯神殿名 Hut-ka-Ptah → 希臘人念成 Aigyptos。<b>這個國名就是從腳下這座消失的城市來的。</b></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<div class="divider">𓊛 𓈖 𓇋 𓃭</div>
+
+<!-- ================= 亞斯文遊輪 ================= -->
+<section id="aswan"><div class="wrap">
+  <div class="sec-head"><span class="tag">ASWAN・CRUISE</span><h2>導覽手冊：亞斯文・阿布辛貝・遊輪</h2><p>10/1 – 10/4</p></div>
+
+  <div class="spot">
+    <figure style="margin:0;border-radius:0"><img src="images/obelisk.jpg" alt="未完成的方尖碑"></figure>
+    <div class="spot-head"><div class="when">DAY 6・10/1 途中快閃（自選）</div><h3>亞斯文：未完成的方尖碑</h3></div>
+    <div class="spot-body">
+      <div class="opening">「亞斯文是古埃及的『南大門』。這裡是全埃及所有花崗岩的故鄉——金字塔的墓室、神殿的方尖碑，石頭全是從這裡沿河運往北方的。」</div>
+      <ul>
+        <li>若班機早到，前往阿布辛貝途中可快閃參觀（約 30 分鐘）。</li>
+        <li><b>未完成的方尖碑</b>：42 公尺、1,168 噸，完工的話會是史上最大——鑿到 3/4 岩體出現裂縫，整根放棄，就地躺了 3,500 年。現場可看到工人用閃長岩石球一下下砸出的溝槽。</li>
+        <li>備用（v2 已割愛）：<b>努比亞村</b>傍晚船遊——彩色房屋、大象島與第一瀑布區日落；若行程有變仍可安排。</li>
+      </ul>
+      <div class="punch">「成功的方尖碑立在世界各大首都，但只有這根失敗的，教會我們它們是怎麼誕生的。」</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <figure style="margin:0;border-radius:0"><img src="images/abu_simbel.jpg" alt="阿布辛貝大神殿"></figure>
+    <div class="spot-head"><div class="when">DAY 6–7・10/1 下午＋10/2 清晨（過夜版）</div><h3>阿布辛貝 Abu Simbel</h3></div>
+    <div class="spot-body">
+      <div class="opening">「埃及最霸氣的建築：拉美西斯二世在帝國最南端直接從山壁裡挖出的神殿，門口四座 20 公尺巨像<b>全部是他自己</b>。這不只是神殿，是給南方看的『帝國看板』。」</div>
+      <ul>
+        <li><b>15:30–18:00 悠閒參觀</b>：日行團 13:00 前就撤了，下午幾乎包場。</li>
+        <li><b>19:00 聲光秀</b>：投影在神殿立面上講拉美西斯的故事（先跟旅館確認當晚場次）。</li>
+        <li><b>10/2 06:00 開門再進一次</b>（自選）：清晨光線直射立面最金黃，日行團 8 點後才到。</li>
+      </ul>
+      <div class="story"><b class="tt">故事一：太陽奇蹟</b>每年 <b>2/22 與 10/22</b>（登基日與生日），朝陽直射 60 公尺深的至聖所，依序照亮三尊神像——<b>唯獨最左邊的黑暗之神普塔永遠照不到</b>。3,300 年前的天文精度。我們 10/2 到訪，就在奇蹟日前 20 天。</div>
+      <div class="story"><b class="tt">故事二：世紀大搬家</b>1960 年代高壩蓄水將淹沒神殿，UNESCO 發起全球救援：<b>把整座山切成 1,036 塊、上移 65 公尺，在人造山丘裡原樣重組</b>，50 國出力、歷時 4 年。切割精準到今天幾乎找不到切縫（讓大家找找看）。這場救援直接催生了《世界遺產公約》——今天全世界的「世界遺產」制度，起點就是阿布辛貝。</div>
+      <div class="story"><b class="tt">故事三：卡迭石戰役</b>大列柱廳北牆整面浮雕：拉美西斯「單槍匹馬」衝陣扭轉戰局——他的官方版本。實際打成平手，最後簽下<b>人類現存最早的國際和平條約</b>（複製品掛在紐約聯合國總部）。「打平的仗宣傳成大勝，還刻在石頭上三千年——政治宣傳不是現代發明。」</div>
+      <ul><li><b>別漏掉旁邊的小神殿</b>：獻給愛妻妮菲塔莉，王后像與法老<b>一樣高</b>（慣例只到膝蓋）——空前的愛情宣言。內殿刻著情詩：「她走過，就把我的心偷走了。」</li></ul>
+    </div>
+  </div>
+
+  <div class="spot">
+    <figure style="margin:0;border-radius:0"><img src="images/philae.jpg" alt="費萊神殿"></figure>
+    <div class="spot-head"><div class="when">DAY 7・10/2 下午（遊輪行程）</div><h3>費萊神殿（伊西斯神殿）＋ 亞斯文高壩</h3></div>
+    <div class="spot-body">
+      <ul>
+        <li>搭小汽船上島。這裡是<b>女神伊西斯</b>的主場——上船前重講一次歐西里斯神話，到現場找壁畫對照。</li>
+        <li><b>古埃及宗教的最後一盞燈</b>：西元 394 年，人類最後一篇象形文字銘文刻於此；550 年左右神殿被關閉——三千年的古埃及宗教在這裡正式熄燈。牆上可找到後來教堂時期的十字架、被鑿毀的神像臉，以及拿破崙遠征軍 1799 年的刻字。</li>
+        <li>它也搬過家：UNESCO 切成 4 萬塊搬到旁邊高處小島重組——現在的島是「替身島」，還特地整形成原島形狀。</li>
+      </ul>
+      <h4>亞斯文高壩</h4>
+      <ul>
+        <li>蘇聯援建，體積是大金字塔的 17 倍，攔出 500 公里長的納賽爾湖。</li>
+        <li>功：終結氾濫旱災、發電曾佔全國一半；過：五千年的氾濫節奏停止、努比亞人失去家園、三角洲開始被海侵蝕。</li>
+        <li>冷戰八卦：美國撤資 → 納賽爾怒將蘇伊士運河收歸國有引爆戰爭 → 最後蘇聯出手——一座壩攪動整個冷戰中東。</li>
+      </ul>
+      <div class="punch">「高壩馴服了尼羅河，也殺死了它的節奏——埃及現代化的全部矛盾，濃縮在一座壩上。」</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="figrow" style="padding:0"><figure style="border-radius:0"><img src="images/kom_ombo.jpg" alt="孔翁波神殿"></figure><figure style="border-radius:0"><img src="images/edfu.jpg" alt="艾德夫神殿塔門"></figure></div>
+    <div class="spot-head"><div class="when">DAY 8・10/3</div><h3>孔翁波 & 艾德夫</h3></div>
+    <div class="spot-body">
+      <h4>孔翁波：鱷魚神的雙拼神殿</h4>
+      <div class="opening">「全埃及唯一的『雙拼神殿』：兩套大門、兩條中軸、兩間至聖所——左拜鷹神荷魯斯，右拜<b>鱷魚神索貝克</b>。為什麼拜鱷魚？河邊生活的人怕什麼就拜什麼——<b>拜到牠保佑你不被吃</b>。」</div>
+      <ul>
+        <li><b>外科手術器械浮雕</b>（後牆必找）：手術刀、鑷子、骨鋸、拔牙鉗——2,000 年前的醫材圖鑑，和現代器械驚人相似。旁邊還有跪姿分娩圖。</li>
+        <li><b>尼羅河水位計</b>：深井連通河水，古代稅務局看水位定稅率——水高＝豐年＝多繳稅，「世界最早的大數據徵稅」。</li>
+        <li>出口旁<b>鱷魚木乃伊博物館</b>小而精必看：連鱷魚蛋、鱷魚寶寶都做成木乃伊。</li>
+      </ul>
+      <h4>艾德夫：保存最完整的神殿</h4>
+      <div class="opening">「如果只能記住一座『完整』的埃及神殿，就是這座——屋頂都還在。原因很妙：它被沙子埋了近兩千年，挖開時居民還住在神殿屋頂上。<b>沙子是最好的防腐劑</b>。」</div>
+      <ul>
+        <li>托勒密王朝蓋了 180 年，完全依古法——希臘人幫我們留下「原廠規格」的神殿標本。36 公尺塔門上是標準款「法老揪敵砍殺」看板（神殿公式在這裡看得最清楚）。</li>
+        <li>門口<b>黑花崗岩荷魯斯鷹像</b>：全埃及最上鏡的雕像之一。</li>
+        <li>西側迴廊：<b>荷魯斯 vs 賽特全套連環畫</b>——賽特被刻成故意縮小的河馬（輸家連體型都被羞辱）。古代每年在此上演「年度大戲」重演此劇。</li>
+        <li>牆上還記載神殿日常：祭司每天為神像喚醒、沐浴、更衣、上供三餐——「神像過得比法老還規律」；供品下架後歸祭司吃——「神吃靈氣，人吃實體」。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-head"><div class="when">DAY 9・10/4 上午</div><h3>艾斯納船閘＋遊輪生活</h3></div>
+    <div class="spot-body">
+      <ul>
+        <li>遊輪進閘、水位下降 8 公尺、開門續航——叫大家到甲板看「<b>船搭電梯</b>」（20–30 分鐘）。</li>
+        <li>等閘時小船划來<b>拋繩上甲板賣長袍桌巾</b>：丟錢下去、拋貨上來，不滿意再丟回去——尼羅河名物「高空拋物購物」。</li>
+        <li>艾斯納主神是羊頭神克努姆：在陶輪上捏出人類——「埃及版女媧摶土造人」。</li>
+        <li>船上通常有一晚「Galabeya Party」埃及長袍之夜——跟拋繩小販買件便宜長袍，全團變裝同樂。</li>
+        <li>岸上集合務必守時（船不等人）；下船日在櫃檯給全體服務費約 USD 5–10/人/晚。</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<div class="divider">𓋹 𓍑 𓋴 𓆓</div>
+
+<!-- ================= 路克索紅海 ================= -->
+<section id="luxor"><div class="wrap">
+  <div class="sec-head"><span class="tag">LUXOR・RED SEA</span><h2>導覽手冊：路克索・紅海</h2>
+  <p>路克索古名<b>底比斯</b>，帝國首都。格局一句話：<b>「東岸給活人，西岸給死人」</b>——日升處蓋神殿，日落處埋法老。</p></div>
+
+  <div class="spot">
+    <figure style="margin:0;border-radius:0"><img src="images/karnak.jpg" alt="卡納克大列柱廳"></figure>
+    <div class="spot-head"><div class="when">DAY 9・10/4 下午（遊輪行程）</div><h3>卡納克神殿 Karnak</h3></div>
+    <div class="spot-body">
+      <div class="opening">「<b>地球上最大的宗教建築群</b>——不是之一。可以塞下 10 座梵蒂岡聖彼得大教堂。而且不是一次蓋成的：歷代法老<b>接力蓋了 1,500 年</b>——一場跨越千年的軍備競賽，每位法老都想留下比前任更大的手筆。」</div>
+      <ul>
+        <li><b>公羊大道</b>：每尊羊下巴下站著小法老——「神罩著王」的具象化。</li>
+        <li><b>大列柱廳</b>：134 根巨柱、中央 12 根高 21 公尺、柱頂可站 50 人。導覽招式：叫大家<b>張開雙臂抱柱</b>——要 6 個人才抱得住。抬頭找 3,000 年前殘存的原始彩繪。</li>
+        <li><b>哈特謝普蘇特方尖碑</b>：30 公尺、埃及現存最高。她在銘文裡寫：「後世的人會說：我不知道他們怎麼辦到的。」（她猜對了。）繼子清算她時不敢拆碑（怕觸怒神），改砌牆把下半部圍起來眼不見為淨——「氣量狹小，無意中做了文物保護。」</li>
+        <li><b>聖甲蟲雕像</b>（聖湖旁）：繞行 7 圈願望成真——全卡納克最歡樂的角落。聖甲蟲＝糞金龜：推糞球如太陽神推日輪——「連推糞都能推成神」。</li>
+        <li>卡納克主人阿蒙神的祭司集團極盛時有 8 萬僱員、富可敵國——圖坦卡門他爸的一神教改革就是想拔掉這個集團。改革失敗，兒子被迫改回來。（把 GEM 的故事在這裡接起來）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="spot">
+    <figure style="margin:0;border-radius:0"><img src="images/luxor_temple.jpg" alt="路克索神殿夜景"></figure>
+    <div class="spot-head"><div class="when">DAY 11・10/6 晚（夜遊）</div><h3>路克索神殿 Luxor Temple</h3></div>
+    <div class="spot-body">
+      <div class="opening">「白天看卡納克，晚上看路克索神殿——全埃及打燈最美的神殿。這裡疊著四層信仰：<b>法老神殿上疊羅馬軍營、軍營上疊教堂、教堂上面現在還有一座運作中的清真寺</b>——像地質層一樣。」</div>
+      <ul>
+        <li><b>人面獅身大道</b>：連接卡納克的 2.7 公里大道、上千座獅身像。古代每年「歐佩特節」，阿蒙神像沿此路出巡與妻子團聚——全城放假的埃及嘉年華。</li>
+        <li><b>門口單根方尖碑</b>：原本一對，另一根 1830 年代送給法國、現立巴黎協和廣場——「換來的就是開羅城堡那座不準的鐘」（全團會心一笑）。</li>
+        <li>塔門上又是卡迭石戰役浮雕——讓大家自己認出「阿布辛貝同款」，成就感十足。</li>
+        <li><b>阿布・哈加清真寺</b>：13 世紀建在被沙埋的神殿「屋頂」上；神殿挖開後，清真寺懸在半空柱頂、門開在空中——<b>至今每天做禮拜</b>。</li>
+      </ul>
+      <div class="punch">「別的遺跡是死掉的過去，路克索神殿是被連續使用了 3,400 年、還活著的建築。」</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="figrow" style="padding:0"><figure style="border-radius:0"><img src="images/vok.jpg" alt="帝王谷"></figure><figure style="border-radius:0"><img src="images/vok_tomb.jpg" alt="拉美西斯四世墓"></figure></div>
+    <div class="spot-head"><div class="when">DAY 10・10/5 上午</div><h3>帝王谷 Valley of the Kings</h3></div>
+    <div class="spot-body">
+      <div class="opening">「法老們發現：<b>金字塔＝『寶藏在此』的巨型路標</b>，古王國陵墓全被盜光。所以帝國時代的法老把陵墓藏進這條荒谷的山肚子裡——抬頭看谷後那座山峰，<b>天然就是金字塔形</b>：不蓋金字塔，借一座天然的。結果呢？63 座墓還是幾乎全被盜光——唯一漏網的就是圖坦卡門。」</div>
+      <ul>
+        <li>基本票含 3 座墓（名單輪替）；<b>加購 KV9 拉美西斯五/六世墓必看</b>（CP 值之王：整幅「天空女神努特吞吐太陽」天花板）；KV62 圖坦卡門墓自選——文物都在 GEM，但<b>法老本人木乃伊就躺在裡面</b>；KV17 塞提一世墓最美最貴。</li>
+        <li>墓的公式：斜長廊直插山腹＝通往冥界之路，牆上刻《來世之書》——<b>給法老靈魂用的「冥界導航手冊」</b>：夜裡太陽神的船要闖 12 道關卡，法老搭便船同行，天亮一起重生。</li>
+        <li>造墓工人村留下了請假單（「兄弟釀啤酒、被蠍子螫」都是准假理由）和<b>人類史上第一次罷工</b>紀錄（欠糧罷工，成功討薪）。</li>
+        <li>遊客中心先看立體模型；碼頭到墓區有小火車，省腿力。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="figrow" style="padding:0"><figure style="border-radius:0"><img src="images/hatshepsut.jpg" alt="哈特謝普蘇特神殿"></figure><figure style="border-radius:0"><img src="images/memnon.jpg" alt="曼儂巨像"></figure></div>
+    <div class="spot-head"><div class="when">DAY 10・10/5 上午</div><h3>哈特謝普蘇特女王神殿＋曼儂巨像</h3></div>
+    <div class="spot-body">
+      <div class="opening">「三層平台嵌進粉色斷崖——這座 3,500 年前的建築，現代感強到像當代美術館。主人是埃及史上最成功的女法老。」</div>
+      <ul>
+        <li>她的故事：夫死、繼子年幼 → 攝政 → 乾脆自己登基，<b>戴假鬍子、以男裝形象自稱「國王」</b>（現場雕像多為男相，可對照）→ 統治 20 年不打大仗，專心貿易建設。</li>
+        <li>中層柱廊有<b>遠航邦特之地的全套「紀錄片」浮雕</b>：非洲村落、海魚、猴子、整棵搬回來種的乳香樹（樹坑遺跡還在前庭）。</li>
+        <li><b>死後被消失</b>：繼子圖特摩斯三世下令鑿掉她的王名、砸毀雕像——目的可能是把「女人當法老」從官方紀錄刪除。結果考古學家從被鑿空的王名圈反推出「這裡有個被抹掉的法老」，反而讓她成為最有名的法老之一。</li>
+        <li>八卦：平民出身的建築師塞內穆特把自己的小像偷刻在神殿隱蔽處「永遠陪伴女王」——兩人關係是埃及學最愛的緋聞。</li>
+      </ul>
+      <div class="punch">「他們花 20 年想把她從歷史上擦掉，結果幫她變成了永恆的謎——刪除，是最強的宣傳。」</div>
+      <h4>曼儂巨像（路邊 10 分鐘）</h4>
+      <ul>
+        <li>兩尊 18 公尺、各 720 噸坐像。<b>會唱歌的雕像</b>：地震後北像每天日出發出嗚咽（石縫露水蒸發共鳴），羅馬時代的觀光聖地，哈德良皇帝專程來聽，基座留有 100 多條羅馬遊客「到此一遊」。後來皇帝好心修復雕像——<b>一修好就再也不唱了</b>：「史上最失敗的文物修復」。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="spot">
+    <figure style="margin:0;border-radius:0"><img src="images/balloon.jpg" alt="路克索熱氣球"></figure>
+    <div class="spot-head"><div class="when">DAY 11・10/6 清晨</div><h3>熱氣球（自選強推）</h3></div>
+    <div class="spot-body"><ul>
+      <li>日出從西岸升空：腳下是帝王谷、女王神殿、綠色河谷與沙漠的交界——<b>「東岸活人城醒來、西岸死人城沉睡」的上帝視角</b>，全程約 45 分鐘。</li>
+      <li>04:30 接駁；籃子高 1.2 公尺需跨爬；著陸偶有拖曳；心臟病、嚴重骨質疏鬆者不宜。風大會取消（退款或改期）——所以排 10/6 而非最後一天，留改期空間。</li>
+    </ul></div>
+  </div>
+
+  <div class="spot">
+    <figure style="margin:0;border-radius:0"><img src="images/red_sea.jpg" alt="紅海"></figure>
+    <div class="spot-head"><div class="when">DAY 12–14・10/7–10/9</div><h3>紅海 Hurghada</h3></div>
+    <div class="spot-body">
+      <p>這三天是「從文明濃湯裡撈起來、放進海水裡漂著」的減壓日。</p>
+      <ul>
+        <li>紅海是<b>世界最北的熱帶珊瑚海</b>：高鹽、無河注入、水質透明，珊瑚生態密度世界頂級。名字由來主流說法是季節性紅色藻華。</li>
+        <li><b>吉夫頓島／Orange Bay 出海日</b>：白沙洲＋浮潛，常見海龜、海豚群；不下水可在沙洲躺椅休息，或搭玻璃底船看珊瑚。</li>
+        <li>浮潛守則：穿救生衣、不碰珊瑚（割傷＋違法）、不追海龜；暈船藥出發前 30 分鐘吃。</li>
+        <li>彩蛋：《海底總動員》的小丑魚就住在這片海的海葵裡——請導潛帶你們找 Nemo。</li>
+      </ul>
+      <div class="punch" style="margin-top:20px">導遊收尾（回程飛機上講）：「這趟我們看了 4,500 年的金字塔、3,300 年的帝國神殿、2,000 年的希臘式神殿、1,600 年的教堂、1,000 年的清真寺，最後在紅海把一身沙洗掉。古埃及人相信：只要名字還被人念出來，靈魂就繼續活著。今天我們念了古夫、哈特謝普蘇特、拉美西斯——他們就又活過來了一次。謝謝各位團員，本團圓滿，導遊下班。」</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ================= 待辦 ================= -->
+<section id="checklist"><div class="wrap">
+  <div class="sec-head"><span class="tag">TO-DO</span><h2>待辦與待訂清單</h2><p>照急迫度排序</p></div>
+  <ul class="check">
+    <li class="hot"><span><b>黑白沙漠 2天1夜</b>：直接向 B&amp;W Sahara Sky Camp 訂含開羅接送＋吉普行程的套裝（官網 bwsaharasky.com 或 Booking/當地旅行社），確認：獨立衛浴帳型、含三餐、中英文嚮導</span></li>
+    <li class="hot"><span><b>國內線機票 ×2</b>：10/1 CAI→ASW（最早班）、10/10 HRG→CAI（最早班，才趕得上 15:00 國際線）</span></li>
+    <li class="hot"><span><b>開羅市區 Eileen Hotel 訂 9/29–9/30 兩晚</b>（9/28 在沙漠不用訂）</span></li>
+    <li class="hot"><span><b>阿布辛貝 10/1 一晚</b>（Seti Abu Simbel Lake Resort / Eskaleh）＋亞斯文⇄阿布辛貝兩日包車</span></li>
+    <li class="hot"><span><b>紅海 10/7–10/9 三晚</b>（建議全包式度假村）</span></li>
+    <li><span><b>GEM 門票</b>：tickets.gem.eg 線上購買 <b>9/27 下午時段</b>（現場不售票）</span></li>
+    <li><span>熱氣球、9 Pyramids Lounge、<b>Khufu's 晚餐（9/27）</b>訂位；確認阿布辛貝聲光秀 10/1 場次</span></li>
+    <li><span>向遊輪確認：岸上觀光／門票／英文導遊是否含在訂價</span></li>
+    <li><span>簽證美金現鈔 $25/人＋小費小鈔（$1 多換）；兩張信用卡</span></li>
+    <li><span>eSIM；旅平險＋腸胃藥；沙漠夜間薄外套＋手電筒</span></li>
+  </ul>
+</div></section>
+
+<footer>
+  <div class="hiero">𓋹 𓊽 𓋴</div>
+  埃及自由行手冊・2026.9.25 – 10.11<br>
+  行前請以官方資訊再次確認票價與時刻｜圖片來源：Wikimedia Commons（開放授權）<br>
+  Ankh, Djed, Was —— 生命、穩定、力量
+</footer>
+
+</body>
+</html>
