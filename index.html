@@ -176,6 +176,17 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
   a{color:inherit;text-decoration:none}
   a[href^="http"]::after{content:" 〔" attr(href) "〕";font-size:9.5px;color:#5c4d3c;word-break:break-all}
   .check li{break-inside:avoid;background:#fff}
+  /* 含照片版（手機 PDF 用）：body.print-photos 時把照片與底色印出來 */
+  body.print-photos{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body.print-photos .day img.dayimg{display:block;height:150px;object-fit:cover;break-inside:avoid}
+  body.print-photos figure img{display:block;max-height:230px;object-fit:cover}
+  body.print-photos .spot figure{display:block}
+  body.print-photos .figrow{grid-template-columns:1fr 1fr}
+  body.print-photos .figrow img{height:150px}
+  body.print-photos .hero{min-height:auto;padding:26px 0;background:linear-gradient(rgba(25,18,10,.35),rgba(25,18,10,.65)),url('images/giza.jpg') center/cover;color:#fff}
+  body.print-photos .hero h1{color:#fff}
+  body.print-photos .hero p{color:#f0e8d8}
+  body.print-photos .punch{background:var(--ink);color:#f3e9d2;border:none}
 }
 </style>
 </head>
@@ -233,7 +244,7 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
 </li>
 <li><div class="s-date">9/29–9/30<span>2 晚</span></div>
  <div><div class="s-name">Eileen Hotel Cairo</div>
- <div class="s-note">開羅市區</div>
+ <div class="s-note">開羅市區・含早餐</div>
  <div class="s-cxl">免費取消至 9/24</div></div>
  <div class="s-price">5,435<span>2,718/晚</span></div>
 </li>
@@ -270,7 +281,7 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
 <p style="font-size:14px;color:var(--ink2);margin-bottom:8px">一頁看完 17 天。餐食欄「含」＝住宿／團費／遊輪已含，「自」＝自理；金額為 4 人當日估算（TWD）。細節見下方每日卡片。</p>
 <div class="table-scroll"><table class="glance">
 <tr><th>日</th><th>主要行程</th><th>住宿</th><th>餐食</th><th>交通</th><th>4 人估算</th></tr>
-<tr><td><b>Day 0</b><br><span class="tiny">9/25 五</span></td><td>出發：TPE→SIN（轉機 8.5h）→AUH</td><td>機上</td><td>含含含<br><span class="tiny">機上餐</span></td><td>—</td><td>—</td></tr><tr><td><b>Day 1</b><br><span class="tiny">9/26 六</span></td><td>05:25 落地開羅・休整日；屋頂看金字塔與聲光秀</td><td>Soul Pyramids View</td><td>含・自・自</td><td>機場接機 45–50 分</td><td>7,000</td></tr><tr><td><b>Day 2</b><br><span class="tiny">9/27 日</span></td><td><b>吉薩園區＋GEM</b>（唯一請中文導遊的一天）</td><td>Soul Pyramids View</td><td>含・自・自</td><td>園內免費接駁＋Uber</td><td>8,900</td></tr><tr><td><b>Day 3</b><br><span class="tiny">9/28 一</span></td><td>黑白沙漠 D1：水晶山→大峽谷→白沙漠→篝火星空</td><td>B&amp;W Sahara Sky Camp</td><td>含含含<br><span class="tiny">團費含</span></td><td>開羅→白沙漠 350km／4h+</td><td>團費含</td></tr><tr><td><b>Day 4</b><br><span class="tiny">9/29 二</span></td><td>沙漠 D2：黑沙漠日出→玫瑰峽谷→綠洲→回開羅</td><td>Eileen Hotel Cairo</td><td>含・<b>自</b>・自<br><span class="tiny">D2 午餐不含</span></td><td>綠洲→開羅 4–5h</td><td>2,300</td></tr><tr><td><b>Day 5</b><br><span class="tiny">9/30 三</span></td><td>NMEC 皇家木乃伊廳→科普特老開羅→可汗卡利利</td><td>Eileen Hotel Cairo</td><td>自自自</td><td>全天 Uber</td><td>5,000</td></tr><tr><td><b>Day 6</b><br><span class="tiny">10/1 四</span></td><td>飛亞斯文→包車南下阿布辛貝；夕照巨像＋聲光秀</td><td>Amon Guest House</td><td>自自自</td><td>國內線 1.5h＋包車 3.5–4h</td><td>25,200</td></tr><tr><td><b>Day 7</b><br><span class="tiny">10/2 五</span></td><td>清晨二進阿布辛貝→回亞斯文→<b>12:00 登船</b>；下午高壩＋費萊</td><td>MS Chateau Lafayette</td><td>含含含<br><span class="tiny">遊輪全膳</span></td><td>回程 3.5h＋續留半天</td><td>2,700</td></tr><tr><td><b>Day 8</b><br><span class="tiny">10/3 六</span></td><td>遊輪：14:00 啟航→<b>孔翁波 17:00</b>→夜泊艾德夫</td><td>MS Chateau Lafayette</td><td>含含含</td><td>航行</td><td>3,300</td></tr><tr><td><b>Day 9</b><br><span class="tiny">10/4 日</span></td><td>05:30 艾德夫→艾斯納船閘→15:30 抵路克索；傍晚路克索神殿</td><td>MS Chateau Lafayette</td><td>含含含</td><td>航行</td><td>1,500</td></tr><tr><td><b>Day 10</b><br><span class="tiny">10/5 一</span></td><td><b>08:00 下船</b>→西岸半日：帝王谷＋KV9→女王神殿→曼儂巨像</td><td>Steigenberger Achti</td><td>含・自・自</td><td>西岸半日包車</td><td>10,700</td></tr><tr><td><b>Day 11</b><br><span class="tiny">10/6 二</span></td><td>04:30 熱氣球→07:30 卡納克→下午休息→路克索神殿夜遊</td><td>Steigenberger Achti</td><td>含・自・自</td><td>熱氣球接送＋Uber</td><td>7,800</td></tr><tr><td><b>Day 12</b><br><span class="tiny">10/7 三</span></td><td>路克索→<b>丹德拉神廟</b>→紅海洪加達</td><td>Sunny Days Mirette</td><td>含・自・<b>含</b><br><span class="tiny">晚起全包式</span></td><td>全日包車 5.5h</td><td>5,800</td></tr><tr><td><b>Day 13–14</b><br><span class="tiny">10/8–9 四五</span></td><td>10/8 吉夫頓島潛水（3 人）＋浮潛；10/9 只能浮潛・休息</td><td>Sunny Days Mirette</td><td>含含含<br><span class="tiny">全包式</span></td><td>潛店接送</td><td>8,800</td></tr><tr><td><b>Day 15–16</b><br><span class="tiny">10/10–11</span></td><td><b>05:30 包車直達開羅機場</b>（5.5h）→15:00 CAI→AUH→SIN→10/11 18:35 抵台北</td><td>機上</td><td>含・自・含</td><td>包車 460km／5.5h</td><td>5,500</td></tr>
+<tr><td><b>Day 0</b><br><span class="tiny">9/25 五</span></td><td>出發：TPE→SIN（轉機 8.5h）→AUH</td><td>機上</td><td>含含含<br><span class="tiny">機上餐</span></td><td>—</td><td>—</td></tr><tr><td><b>Day 1</b><br><span class="tiny">9/26 六</span></td><td>05:25 落地開羅・休整日；屋頂看金字塔與聲光秀</td><td>Soul Pyramids View</td><td>含・自・自</td><td>機場接機 45–50 分</td><td>7,000</td></tr><tr><td><b>Day 2</b><br><span class="tiny">9/27 日</span></td><td><b>吉薩園區＋GEM</b>（唯一請中文導遊的一天）</td><td>Soul Pyramids View</td><td>含・自・自</td><td>園內免費接駁＋Uber</td><td>8,900</td></tr><tr><td><b>Day 3</b><br><span class="tiny">9/28 一</span></td><td>黑白沙漠 D1：水晶山→大峽谷→白沙漠→篝火星空</td><td>B&amp;W Sahara Sky Camp</td><td>含含含<br><span class="tiny">團費含</span></td><td>開羅→白沙漠 350km／4h+</td><td>團費含</td></tr><tr><td><b>Day 4</b><br><span class="tiny">9/29 二</span></td><td>沙漠 D2：黑沙漠日出→玫瑰峽谷→綠洲→回開羅</td><td>Eileen Hotel Cairo</td><td>含・<b>自</b>・自<br><span class="tiny">D2 午餐不含</span></td><td>綠洲→開羅 4–5h</td><td>2,300</td></tr><tr><td><b>Day 5</b><br><span class="tiny">9/30 三</span></td><td>NMEC 皇家木乃伊廳→科普特老開羅→可汗卡利利</td><td>Eileen Hotel Cairo</td><td>含・自・自</td><td>全天 Uber</td><td>5,000</td></tr><tr><td><b>Day 6</b><br><span class="tiny">10/1 四</span></td><td>飛亞斯文→包車南下阿布辛貝；夕照巨像＋聲光秀</td><td>Amon Guest House</td><td>含・自・自<br><span class="tiny">早班機可能吃不到早餐</span></td><td>國內線 1.5h＋包車 3.5–4h</td><td>25,200</td></tr><tr><td><b>Day 7</b><br><span class="tiny">10/2 五</span></td><td>清晨二進阿布辛貝→回亞斯文→<b>12:00 登船</b>；下午高壩＋費萊</td><td>MS Chateau Lafayette</td><td>含含含<br><span class="tiny">遊輪全膳</span></td><td>回程 3.5h＋續留半天</td><td>2,700</td></tr><tr><td><b>Day 8</b><br><span class="tiny">10/3 六</span></td><td>遊輪：14:00 啟航→<b>孔翁波 17:00</b>→夜泊艾德夫</td><td>MS Chateau Lafayette</td><td>含含含</td><td>航行</td><td>3,300</td></tr><tr><td><b>Day 9</b><br><span class="tiny">10/4 日</span></td><td>05:30 艾德夫→艾斯納船閘→15:30 抵路克索；傍晚路克索神殿</td><td>MS Chateau Lafayette</td><td>含含含</td><td>航行</td><td>1,500</td></tr><tr><td><b>Day 10</b><br><span class="tiny">10/5 一</span></td><td><b>08:00 下船</b>→西岸半日：帝王谷＋KV9→女王神殿→曼儂巨像</td><td>Steigenberger Achti</td><td>含・自・自</td><td>西岸半日包車</td><td>10,700</td></tr><tr><td><b>Day 11</b><br><span class="tiny">10/6 二</span></td><td>04:30 熱氣球→07:30 卡納克→下午休息→路克索神殿夜遊</td><td>Steigenberger Achti</td><td>含・自・自</td><td>熱氣球接送＋Uber</td><td>7,800</td></tr><tr><td><b>Day 12</b><br><span class="tiny">10/7 三</span></td><td>路克索→<b>丹德拉神廟</b>→紅海洪加達</td><td>Sunny Days Mirette</td><td>含・自・<b>含</b><br><span class="tiny">晚起全包式</span></td><td>全日包車 5.5h</td><td>5,800</td></tr><tr><td><b>Day 13–14</b><br><span class="tiny">10/8–9 四五</span></td><td>10/8 吉夫頓島潛水（3 人）＋浮潛；10/9 只能浮潛・休息</td><td>Sunny Days Mirette</td><td>含含含<br><span class="tiny">全包式</span></td><td>潛店接送</td><td>8,800</td></tr><tr><td><b>Day 15–16</b><br><span class="tiny">10/10–11</span></td><td><b>05:30 包車直達開羅機場</b>（5.5h）→15:00 CAI→AUH→SIN→10/11 18:35 抵台北</td><td>機上</td><td>含・自・含</td><td>包車 460km／5.5h</td><td>5,500</td></tr>
 </table></div></div>
 
 <div class="card"><h3>路線圖・17 天怎麼走</h3>
@@ -294,6 +305,12 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
  <li><b>05:25 抵達開羅機場</b>。入關前於銀行櫃檯買落地簽貼紙：每人 25 美元現金（護照效期需 6 個月以上）。</li>
  <li>機場辦 SIM（Vodafone/Orange 觀光方案約 USD 10–15），或事先買好 eSIM 落地即上網。</li>
  <li>07:00 請飯店安排接機（約 USD 20–25，車程 50 分鐘）。寄放行李、補眠 2–3 小時，今天不排重行程。</li>
+ <li><b>午餐與晚餐（自理，剛落地建議就近吃）</b>
+        <ul>
+          <li><b>自家飯店 Soul Pyramids View 屋頂</b>——走路 0 分鐘、看得到金字塔，剛飛了 20 小時最實在。<b>4 人約 TWD 1,000–1,600</b></li>
+          <li><b>El Dar Darak</b>（步行 10 分）——當地家常菜，招牌是烤雞、mahshi 鑲蔬菜、tagine 陶鍋，也看得到金字塔。EGP 150–300/人，<b>4 人約 TWD 600–800</b></li>
+          <li><b>Zeeyara Pyramids Elite</b> 屋頂（4.6 分／343 則）——想吃好一點：<b>駱駝肉丸</b>、烤肉拼盤、現烤 baladi 餅。EGP 470–1,200/人，<b>4 人約 TWD 1,200–3,100</b></li>
+        </ul></li>
  <li>15:00 後：屋頂露台看金字塔喝茶；晚上可從屋頂免費看金字塔聲光秀（Sound &amp; Light Show）。早睡調時差。</li>
  <li><b>本日 4 人估算：約 TWD 7,000</b>（落地簽 $100＝3,200＋SIM/eSIM 1,500＋接機 800＋簡單兩餐 1,500）</li>
 </ul></div><div class="daybar"><span class="meals"><span class="lbl">餐食</span><i class="on">早</i><i class="">午</i><i class="">晚</i></span><span class="seg">飯店含早；午晚自理</span><span class="seg"><b>交通</b>機場 → 吉薩，車程 45–50 分</span></div></div>
@@ -343,13 +360,20 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
  <li><b>清晨在酒店內活動（自由參加）</b>：觀景台看黑沙漠日出——黝黑的火山熔岩地貌鎮上金輝，偶爾有貝都因人趕駱駝經過 → 玫瑰峽谷（Rose Valley）徒步，風蝕溝壑、岩壁五彩 → 免費馬車體驗 → 火山牧場餵駱駝。</li>
  <li><b>07:30–09:00 早餐</b>（團費含）後整理行李，換越野車走巴哈利亞綠洲（Bahariya Oasis）：法老時期就存在的上萬畝椰棗林、沙漠溫泉（看灌溉技術、可泡腳）、如鏡面的鹽湖倒影、金字塔山（形狀酷似金字塔、據傳早於金字塔）、以及綠洲博物館（皇室完整木乃伊＋兩種風格地下墓穴壁畫）。博物館週五、六、日不營業（9/29 是週二 OK）、館內沒有導遊，要導覽需提前預約。</li>
  <li>綠洲行程後直接在綠洲換開羅車返回開羅 → 順路回吉薩 Soul Pyramids View 取寄放行李 → 約 17:00–18:00 入住開羅市區 Eileen Hotel（9/29–30 兩晚）。</li>
- <li><b>第二天午餐不含在團費裡</b>（團費的三餐是 D1 午餐、D1 晚餐、D2 早餐）。兩種做法：<br>A・不吃、直接回開羅（原定）：綠洲行程結束就上車，路上自備零食，回開羅吃晚餐。<br>B・回酒店吃午餐再走：要提前一天（9/28）告知旅行社，自費 US$10/人（4 人 ≈ TWD 1,280），且要先回酒店換車，回開羅時間會晚約 2 小時。9/29 傍晚沒有安排、只是進市區入住，所以 B 案時間上可行；但長輩已經在沙漠兩天，早點回市區洗澡休息也不錯——建議選 A，帶足水與零食。</li>
- <li><b>本日 4 人估算：約 TWD 2,300</b>（A 案：團費含 D2 早餐＋開羅晚餐 2,000＋Uber 300）；改 B 案加午餐 US$40 ≈ ＋1,280。</li>
+ <li><b>第二天午餐不含在團費裡</b>（團費的三餐是 D1 午餐、D1 晚餐、D2 早餐）。兩種做法：<br>A・不吃、直接回開羅（原定）：綠洲行程結束就上車，路上自備零食，回開羅吃晚餐。<br>B・回酒店吃午餐再走：要提前一天（9/28）告知旅行社，自費 US$10/人（4 人 ≈ TWD 1,280），且要先回酒店換車，回開羅時間會晚約 2 小時。9/29 傍晚沒有安排、只是進市區入住，所以 B 案時間上可行；但在沙漠住了兩天，早點回市區洗澡休息也舒服——建議選 A，帶足水與零食。</li>
+ <li><b>晚餐（自理・開羅市區，Eileen 步行可到）</b>
+        <ul>
+          <li><b>Felfela</b>（步行 2 分）——首選：老字號埃及菜，<b>ful 燉蠶豆、taameya 炸豆餅、mahshi 鑲菜、烤鴿</b>，有英文菜單與冷氣、口味溫和。<b>4 人約 TWD 1,600–2,400</b></li>
+          <li><b>Koshary Abou Tarek</b>（步行 10 分，4.6 分／2,543 則）——開羅國民美食<b>庫夏里</b>（米＋麵＋鷹嘴豆＋炸洋蔥＋番茄醬）。EGP 25–60/份，<b>4 人含飲料約 TWD 200–400</b>，全程最便宜的一餐</li>
+          <li><b>Koshary El Tahrir</b>（步行 3 分）——同樣庫夏里、離飯店最近。<b>4 人約 TWD 250</b></li>
+        </ul></li>
+ <li><b>本日 4 人估算：約 TWD 2,300</b>（A 案：團費含 D2 早餐＋開羅晚餐 2,000［Felfela 步行 2 分］＋Uber 300）；改 B 案加午餐 US$40 ≈ ＋1,280。</li>
 </ul></div><div class="daybar"><span class="meals"><span class="lbl">餐食</span><i class="on">早</i><i class="">午</i><i class="">晚</i></span><span class="seg">沙漠團含早；<b>午餐不含</b>（可加購 US$10/人，須前一天說）</span><span class="seg"><b>交通</b>綠洲 → 開羅，約 4–5 小時</span></div></div>
 
 <div class="day"><img class="dayimg" src="images/nmec.jpg" alt="埃及文明博物館">
  <div class="head"><span class="no">Day 5</span><h3>9/30（三）NMEC＋科普特老開羅＋可汗卡利利 Khan el-Khalili</h3><span class="stay">Eileen Hotel Cairo</span></div>
  <div class="body"><ul>
+ <li><b>早餐（Eileen 含早餐）</b>：先在飯店吃飽再出門，09:00 要到 NMEC。想試當地口味的話，飯店所在的 <b>Bab al-Louq</b> 一帶街邊小店有最道地的埃及國民早餐——<b>ful 燉蠶豆＋taameya 炸豆餅＋baladi 餅</b>，每人 EGP 30–60（<b>4 人約 TWD 100–160</b>）。</li>
  <li><b>一日節奏</b>：09:00 NMEC（2–2.5h）→ 11:45 科普特老開羅（同區，車程 5 分鐘，1.5–2h）→ 14:00 回飯店午餐＋午休（避開最熱的 14–16 點）→ 17:00 可汗卡利利（3–4h，含晚餐、夜間打燈最美）→ 21:30 回飯店打包（明天進阿布辛貝過夜，遊輪行李一起帶走）。</li>
 
  <li><b>包車還是叫車？→ <b>叫 Uber 就好</b></b>。這天只有 3 個點、每個點都停很久，包車等於花錢讓車停著：全天 5 趟 Uber 約 EGP 500–900（≈ TWD 325–585），半日包車要 US$40–50（≈1,280–1,600）。可汗卡利利巷內車進不去——上下車點約在 Al-Azhar 大街邊或 Al-Hussein 清真寺廣場；回程若叫不到車，走到 Al-Azhar 街上再叫。<br>省錢備案：地鐵 1 號線 Mari Girgis 站就在科普特老開羅門口（票價 EGP 8–10、有冷氣），從市區搭過去比塞車快。</li>
@@ -372,7 +396,7 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
  <ul><li><b>動線</b>：Al-Azhar 街 →（地下道）→ Al-Hussein 清真寺廣場（先跟家人講好走散就在這裡集合）→ 百年咖啡館 El Fishawy（1797 年開業）喝薄荷茶（EGP 50–80）→ 主巷 Badestan 一帶 →往北走 Al-Muizz 街（露天古蹟博物館，夜間打燈最美，人也少）。</li>
  <li><b>主巷（大巴停靠、一直喊你的那條）價格是行情的 3–4 倍</b>。訣竅：沒人拉你的安靜巷子才是真價格。</li>
  <li><b>分區買什麼</b>：銅匠巷 Haret el-Nahaseen（手工敲打銅盤、銅燈）／Al-Sagha 金銀街（訂做 cartouche 名字象形文字項鍊，銀質約 EGP 800–1,800，現場刻 30–60 分鐘）／香料市場（洛神花 karkade、番紅花、角豆、孜然，最好帶的伴手禮）／香精油／雪花石、埃及棉、燈具、莎草紙。</li>
- <li><b>私房推薦：Abd el-Zaher 手工皮革裝幀書坊</b>（Al-Azhar 清真寺後方小巷，同一家族三代做了 80 年）：手工皮革筆記本可壓中/英文名字，EGP 100–250、約 20 分鐘取件——比觀光紀念品有意義得多，長輩送禮也體面。</li>
+ <li><b>私房推薦：Abd el-Zaher 手工皮革裝幀書坊</b>（Al-Azhar 清真寺後方小巷，同一家族三代做了 80 年）：手工皮革筆記本可壓中/英文名字，EGP 100–250、約 20 分鐘取件——比觀光紀念品有意義得多，送禮也體面。</li>
  <li><b>殺價</b>：從開價的 30–50% 開始談，先問材質產地、笑著聊；談不成就道謝走人，常常會被叫回來。莎草紙小心香蕉葉假貨（真的逆光看有纖維交織紋）。</li></ul></li>
 
  <li><b>這天的餐怎麼安排（走中價位）</b>
@@ -381,7 +405,7 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
  <li>El Fishawy 只喝茶、不吃正餐（食物評價一般，價值在氛圍）。</li></ul></li>
 
  <li><b>本日 4 人估算：約 TWD 5,000</b>（NMEC 550EGP×4≈1,430＋Uber 全日 600＋午餐 300＋晚餐 2,300＋薄荷茶與雜支 400）；自選科普特博物館 4 人＋730、cartouche 項鍊每條約 520–1,170、皮革筆記本每本約 65–160。</li>
-</ul></div><div class="daybar"><span class="meals"><span class="lbl">餐食</span><i class="">早</i><i class="">午</i><i class="">晚</i></span><span class="seg">三餐自理（Eileen 是否含早需確認）</span><span class="seg"><b>交通</b>全天 Uber，約 EGP 500–900</span></div></div>
+</ul></div><div class="daybar"><span class="meals"><span class="lbl">餐食</span><i class="on">早</i><i class="">午</i><i class="">晚</i></span><span class="seg">Eileen 含早；午晚自理</span><span class="seg"><b>交通</b>全天 Uber，約 EGP 500–900</span></div></div>
 
 <div class="day"><img class="dayimg" src="images/abu_simbel.jpg" alt="阿布辛貝">
  <div class="head"><span class="no">Day 6</span><h3>10/1（四）飛亞斯文 Aswan → 阿布辛貝 Abu Simbel 過夜</h3><span class="stay">Amon Guest House（已訂）</span></div>
@@ -390,17 +414,24 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
  <li>落地後包車直奔阿布辛貝（車程 3.5 小時，包車兩日含隔天回程約 USD 100–140/車，事先請旅行社或飯店安排）。若班機早到，途中可快閃未完成的方尖碑（Unfinished Obelisk）（30 分鐘）。</li>
  <li>約 14:00 抵達，入住 Amon Guest House（已訂・含早餐 TWD 3,944，免費取消至 9/1；努比亞風格民宿、近神殿、評價佳）。</li>
  <li><b>15:30–18:00 悠閒參觀大小神殿</b>（門票 EGP 820；日行團 13:00 前就撤了，下午幾乎包場）。</li>
- <li><b>晚間聲光秀（Sound &amp; Light Show）</b>——另購，官方票價 <b>USD 20/人</b>（≈ EGP 960，4 人約 TWD 2,560）。投影在神殿立面上講拉美西斯的故事，<b>有中文耳機</b>（官方寫「所有語言」，多語耳機含中文與日文，訂票時再確認一次）。<br><b>兩個要注意的官方規則</b>：① 官方網站列的場次是 <b>20:00 與 21:00</b>（其他來源有 18/19/20 點的說法，以當日公告為準），不是我們原本寫的 19:00；② <b>現場開演有人數門檻</b>——第一場需 10 位埃及人或 5 位外國人、第二場需 5 位外國人才開，<b>我們只有 4 個人，人不夠可能不開</b>。官方說「透過官網訂票不受人數限制」，所以<b>務必事先在 soundandlight.show 線上訂票</b>，不要賭現場。</li>
+ <li><b>早餐與午餐</b>：Eileen 含早餐，但要趕最早班機、<b>可能來不及吃</b>——<b>前一晚請櫃檯準備早餐盒</b>（或自己先買好麵包水果），飯店做不到就到開羅機場吃。午餐（自理）在亞斯文機場或包車路上（司機會停休息站），<b>4 人約 TWD 600–1,000</b>；車上先備零食與水。</li>
+ <li><b>晚餐（自理・村內選擇很少，要先決定）</b>
+        <ul>
+          <li><b>請 Amon Guest House 準備</b>——最省事，入住時就講。<b>4 人約 TWD 1,000–1,600</b></li>
+          <li><b>Eskaleh Eco Lodge（Nubian House）</b>——<b>最有當地特色</b>：努比亞家常菜套餐（烤茄子前菜、蔬菜濃湯、肉／雞／<b>納瑟湖烤魚</b>＋白飯、水果），順道看努比亞式房屋。<b>要先訂位，4 人約 TWD 2,000–3,000</b></li>
+          <li><b>New Abu Simbel Restaurant</b>——當地小店：有冷氣、乾淨、份量大、菜單簡單，可要求素食。<b>4 人約 TWD 700–1,200</b>。想吃湖魚也可找 <b>Elmodhesh Fish</b></li>
+        </ul></li>
+      <li><b>晚間聲光秀（Sound &amp; Light Show）</b>——另購，官方票價 <b>USD 20/人</b>（≈ EGP 960，4 人約 TWD 2,560）。投影在神殿立面上講拉美西斯的故事，<b>有中文耳機</b>（官方寫「所有語言」，多語耳機含中文與日文，訂票時再確認一次）。<br><b>兩個要注意的官方規則</b>：① 官方網站列的場次是 <b>20:00 與 21:00</b>（其他來源有 18/19/20 點的說法，以當日公告為準），不是我們原本寫的 19:00；② <b>現場開演有人數門檻</b>——第一場需 10 位埃及人或 5 位外國人、第二場需 5 位外國人才開，<b>我們只有 4 個人，人不夠可能不開</b>。官方說「透過官網訂票不受人數限制」，所以<b>務必事先在 soundandlight.show 線上訂票</b>，不要賭現場。</li>
  <li>過夜版優勢：不用凌晨 3 點起床、神殿看兩次、包場感受。</li>
  <li><b>本日 4 人估算：約 TWD 25,200</b>（CAI→ASW 機票 $110×4≈14,100＋兩日包車 $120≈3,840＋門票 820EGP×4≈2,130＋聲光秀 960EGP×4≈2,500＋餐 2,600）</li>
-</ul></div><div class="daybar"><span class="meals"><span class="lbl">餐食</span><i class="">早</i><i class="">午</i><i class="">晚</i></span><span class="seg">三餐自理（機場、車上、阿布辛貝村內）</span><span class="seg"><b>交通</b>國內線 1.5h＋包車 3.5–4h</span></div></div>
+</ul></div><div class="daybar"><span class="meals"><span class="lbl">餐食</span><i class="on">早</i><i class="">午</i><i class="">晚</i></span><span class="seg">Eileen 含早（趕早班機可請櫃檯備早餐盒）；午晚自理</span><span class="seg"><b>交通</b>國內線 1.5h＋包車 3.5–4h</span></div></div>
 
 <div class="day"><img class="dayimg" src="images/philae.jpg" alt="費萊神殿">
  <div class="head"><span class="no">Day 7</span><h3>10/2（五）阿布辛貝清晨 → 回亞斯文登船</h3><span class="stay">MS Chateau Lafayette</span></div>
  <div class="body"><ul>
  <li>想再看一次的人：06:00 開門再進神殿（清晨光線直射立面最金黃，日行團 8 點後才到）。</li>
  <li><b>07:30 出發回亞斯文</b>（3.5h）→ 11:00 抵達碼頭。</li>
- <li><b>12:00 登船 check-in、放行李、13:00 船上午餐</b>。<b>費萊神殿與亞斯文高壩都在岸上、不在船上</b>，下午再上岸看；<b>船當晚停泊亞斯文不開走</b>，時間很寬鬆。<br><b>已定案：自己包車＋自己導覽</b>（不跟船方的英文團、也不另請導遊——高壩 20 分鐘沒什麼要講，費萊是單一線性動線，手冊備了伊西斯神話與整座切塊搬遷的解說稿）。這天真正需要的是司機：開車與跟船家議價。<br><b>時間不夠或長輩累了就砍高壩</b>——那是水壩、觀光價值一般；<b>費萊是這天真正該看的</b>（島上神殿、伊西斯女神、整座曾被切塊遷移）。<br>兩件事先談定：① <b>阿布辛貝兩日包車要含「10/2 回亞斯文後續留半天跑高壩＋費萊」</b>，別到現場才被加價；② 若船票其實已含岸上行程，我們不跟團<b>也不會退費</b>——這是自己請中文導遊的代價，先有心理準備。</li>
+ <li><b>12:00 登船 check-in、放行李、13:00 船上午餐</b>。<b>費萊神殿與亞斯文高壩都在岸上、不在船上</b>，下午再上岸看；<b>船當晚停泊亞斯文不開走</b>，時間很寬鬆。<br><b>已定案：自己包車＋自己導覽</b>（不跟船方的英文團、也不另請導遊——高壩 20 分鐘沒什麼要講，費萊是單一線性動線，手冊備了伊西斯神話與整座切塊搬遷的解說稿）。這天真正需要的是司機：開車與跟船家議價。<br><b>時間不夠或走不動了就砍高壩</b>——那是水壩、觀光價值一般；<b>費萊是這天真正該看的</b>（島上神殿、伊西斯女神、整座曾被切塊遷移）。<br>兩件事先談定：① <b>阿布辛貝兩日包車要含「10/2 回亞斯文後續留半天跑高壩＋費萊」</b>，別到現場才被加價；② 若船票其實已含岸上行程，我們不跟團<b>也不會退費</b>——這是自己請中文導遊的代價，先有心理準備。</li>
  <li>晚上努比亞歌舞秀，夜泊亞斯文。登船時確認：岸上觀光、門票、英文導遊是否含在船費內。</li>
  <li><b>本日 4 人估算：約 TWD 2,700</b>（費萊＋高壩門票 750EGP×4≈1,950＋費萊汽船 400＋雜支 350；包車已含在阿布辛貝兩日車費，續留半天若加價再補；<b>已決定不請導遊</b>）；自選清晨二進阿布辛貝 4 人＋2,130</li>
 </ul></div><div class="daybar"><span class="meals"><span class="lbl">餐食</span><i class="on">早</i><i class="on">午</i><i class="on">晚</i></span><span class="seg">Amon 含早；登船後遊輪全膳</span><span class="seg"><b>交通</b>回程 3.5h → 12:00 登船</span></div></div>
@@ -459,7 +490,7 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
 <div class="day"><img class="dayimg" src="images/vok_tomb.jpg" alt="帝王谷陵墓">
  <div class="head"><span class="no">Day 10</span><h3>10/5（一）下船・路克索西岸</h3><span class="stay">Steigenberger Achti</span></div>
  <div class="body"><ul>
- <li><b>先回答「要不要包一日遊」：包半日就夠，不必包全日。</b>西岸三站（帝王谷、哈特謝普蘇特、曼儂巨像）連車程約 4.5 小時，08:00 出發、13:00 就回飯店；10 月路克索白天 38–41°C，下午硬排景點對長輩是折磨，泳池午休更划算。全日只有想加曼迪內哈布神殿（Medinet Habu）或工匠村（Deir el-Medina）才需要，那是二訪路克索才排的深度行程。</li>
+ <li><b>先回答「要不要包一日遊」：包半日就夠，不必包全日。</b>西岸三站（帝王谷、哈特謝普蘇特、曼儂巨像）連車程約 4.5 小時，08:00 出發、13:00 就回飯店；10 月路克索白天 38–41°C，下午硬排景點太熱也太累，泳池午休更划算。全日只有想加曼迪內哈布神殿（Medinet Habu）或工匠村（Deir el-Medina）才需要，那是二訪路克索才排的深度行程。</li>
  <li><b>建議時刻表</b><br>
  07:00–08:00 船上早餐（遊輪最後一餐）、辦下船 → <b>08:00 下船，包車出發（半日 USD 40–50）</b>，過橋往西岸約 25 分鐘<br>
  <b>08:30–10:30 帝王谷 Valley of the Kings</b>：入口到墓區有小火車代步；門票含任選 3 座墓，另加購 KV9（拉美西斯六世墓，<b>強烈建議</b>，天花板天文圖與《來世之書》最完整）<br>
@@ -467,6 +498,11 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
  <b>11:50–12:10 曼儂巨像</b>：路邊即可看、免費，20 分鐘拍照<br>
  12:30–13:00 回東岸 → <b>13:00 入住 Steigenberger Achti</b>，午餐後泳池畔躲太陽<br>
  傍晚：河畔夕陽或搭 <b>Felucca 風帆船</b>（約 EGP 350/小時整船，議價）</li>
+ <li><b>午餐與晚餐（自理・路克索）</b>
+        <ul>
+          <li>午餐：剛從 38–41°C 的西岸回來，<b>直接在 Steigenberger Achti 飯店內</b>吃、泳池邊休息最實在。<b>4 人約 TWD 1,600–2,600</b></li>
+          <li>晚餐首選 <b>Sofra Restaurant &amp; Café</b>——老宅改建、道地埃及菜，招牌是<b>鴿肉飯 hamam mahshi、molokhia 埃及野菜湯、陶鍋 tagine</b>，評價一致好。EGP 200–300/人，<b>4 人約 TWD 700–1,000</b>（全程 CP 值最高的一頓）</li>
+        </ul></li>
  <li><b>門票（官方價，一律刷卡）</b>：帝王谷 <b>EGP 750</b>（含任選 3 墓）＋KV9 加購 <b>220</b>／圖坦卡門墓 <b>+700</b>／塞提一世墓 <b>+2,000</b>（最精美但最貴）；哈特謝普蘇特神殿 <b>440</b>；曼儂巨像免費。西岸各點官方開放 <b>06:00 開門</b>（哈特謝普蘇特最後入場 17:00）。</li>
  <li><b>導遊：已決定不請，自己導覽</b>——這是對的選擇，因為<b>帝王谷官方禁止導遊在墓室內解說</b>（為維持肅靜與保護壁畫，跟 NMEC 木乃伊廳同一個道理）：導遊只能在墓外或休息區先講背景，進墓後還是你們自己看，墓內有解說牌。哈特謝普蘇特神殿與曼儂巨像手冊都備了解說稿，照著念即可。<b>省下的半日導遊費（USD 40–60）留給 10/6 的卡納克更值得。</b></li>
  <li><b>現場備忘</b>：帝王谷無遮蔭、地表反光強——帽子、墨鏡、每人 1.5 公升水；墓內悶熱狹窄、階梯陡，膝蓋不好者挑 KV9 這類坡度平緩的；墓內可用手機拍照（部分墓另收攝影費，現場標示為準）。</li>
@@ -488,7 +524,7 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
  </ul></li>
  <li><b>07:30–09:30 卡納克神殿 Karnak Temple</b>（從 10/4 移過來的重點）：官方 <b>06:00 開門、最後入場 16:00</b>，早上進去涼快又幾乎沒人，134 根巨柱的大列柱廳逆光最美。門票 EGP 600。<b>這一站最值得配中文導遊</b>（可與 10/5 西岸綁成兩個半日）。</li>
  <li>10:00 回飯店補眠／泳池；下午可選路克索博物館（Luxor Museum，EGP 400，冷氣好、小而精）避開 38–41°C。</li>
- <li>日落後路克索神殿（Luxor Temple）夜遊——全埃及打燈最美的神殿。晚餐推薦老宅餐廳 Sofra。</li>
+ <li>日落後路克索神殿（Luxor Temple）夜遊——全埃及打燈最美的神殿。晚餐（自理）建議：<b>Al-Sahaby Lane</b>——露台正對<b>打燈的路克索神殿與獅身人面大道</b>，地中海＋埃及菜、份量大，EGP 100–200/人、<b>4 人約 TWD 350–700</b>，最搭夜遊；或 <b>Sofra</b>（EGP 200–300/人、<b>4 人約 700–1,000</b>）。午餐（自理）在飯店或市區隨意，<b>4 人約 1,000–2,000</b>。</li>
  <li><b>本日 4 人估算：約 TWD 7,800</b>（卡納克 600EGP×4≈1,560＋路克索博物館 400EGP×4≈1,040＋路克索神殿夜遊 500EGP×4≈1,300＋兩餐 3,300＋Uber 600）；自選熱氣球 $85×4≈＋10,900、中文導遊半日＋約 1,600</li>
 </ul></div><div class="daybar"><span class="meals"><span class="lbl">餐食</span><i class="on">早</i><i class="">午</i><i class="">晚</i></span><span class="seg">飯店含早；午晚自理</span><span class="seg"><b>交通</b>熱氣球接送＋市區短程</span></div></div>
 
@@ -498,6 +534,7 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
  <li>08:00 包車北上 60 km（1.5h）→ 09:30–11:30 丹德拉神廟（Dendera Temple of Hathor）：全埃及保存最完整的神殿，可上頂樓、下地下室。必看：星空天花板、地下密室「電燈泡」浮雕（加購 EGP 100）、後牆埃及豔后母子浮雕。門票 EGP 300。</li>
  <li>12:00 簡餐後經 Safaga 紅海公路南下（4h）→ 16:30 抵洪加達（Hurghada）入住。全日包車約 USD 100–130。</li>
  <li><b>住宿：Sunny Days Mirette Family Resort</b>（洪加達，已訂・全包式含三餐酒水，10/7–10/9 三晚 TWD 16,516，免費取消至 10/6）。遊輪＋路克索已住得好，紅海重點是海灘放空。</li>
+ <li><b>午餐（自理・路上選擇有限）</b>：丹德拉到洪加達之間走 Safaga 紅海公路，只有公路休息站簡餐（<b>4 人約 TWD 600–1,000</b>）。<b>最保險是前一晚在路克索買好三明治與水果</b>；晚餐一到度假村就是全包式，不用煩惱。</li>
  <li><b>本日 4 人估算：約 TWD 5,800</b>（包車 3,700＋門票 (300+100)EGP×4≈1,040＋午餐 800＋雜 300）</li>
 </ul></div><div class="daybar"><span class="meals"><span class="lbl">餐食</span><i class="on">早</i><i class="">午</i><i class="on">晚</i></span><span class="seg">飯店含早；午餐路上自理；<b>晚餐起紅海全包式</b></span><span class="seg"><b>交通</b>包車 5.5h（含丹德拉）</span></div></div>
 
@@ -518,6 +555,7 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
  <li><b>10/9 傍晚要辦的事</b>：跟度假村櫃檯<b>訂好 10/10 05:00 的車</b>（指定有冷氣的新車廂型車、確認司機電話）、<b>請廚房準備 4 份早餐盒</b>（05:30 出發吃不到自助早餐）、備好車上的水與零食；行李當晚打包完畢。</li>
  <li><b>路上節奏</b>：05:30 出發 → 08:00 前後在紅海公路休息站停 20 分鐘（廁所、咖啡）→ 11:00–11:30 抵 CAI 第三航廈 → 午餐在機場吃 → 13:00 前完成報到與安檢。</li>
  <li>15:00 CAI → AUH → SIN → 10/11 18:35 抵台北</li>
+ <li><b>午餐（自理）</b>：11:00–11:30 抵開羅機場第三航廈，報到後在航廈內用餐，<b>4 人約 TWD 1,000–1,600</b>（機場價偏高，也可在紅海公路休息站先吃）。早餐是前一晚請度假村準備的早餐盒。</li>
  <li><b>本日 4 人估算：約 TWD 5,500</b>（整車 USD 120–160≈4,500＋路上簡餐 1,000）</li>
 </ul></div><div class="daybar"><span class="meals"><span class="lbl">餐食</span><i class="on">早</i><i class="">午</i><i class="on">晚</i></span><span class="seg">全包式含早（05:30 出發請前一晚要早餐盒）；晚餐為機上餐</span><span class="seg"><b>交通</b>洪加達 → 開羅機場（兩案）</span></div></div>
 </div></section>
@@ -1204,7 +1242,7 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
   <h4>沙塵與防曬（這趟最重要的一類）</h4>
   <ul class="check">
     <li><span><b>口罩</b>——沙漠越野車、市集、神殿碎石區都用得到（不是防疫，是防沙）</span></li>
-    <li><span><b>太陽眼鏡</b>——帝王谷與白沙漠地表反光極強，長輩尤其需要</span></li>
+    <li><span><b>太陽眼鏡</b>——帝王谷與白沙漠地表反光極強，每個人都要一副</span></li>
     <li><span><b>Uniqlo 袖套</b>（AIRism UV 防曬）——比長袖涼、脫戴方便，騎駱駝與船上都好用</span></li>
     <li><span>遮陽帽（有帽帶，沙漠風大）、高係數防曬乳、頭巾或薄圍巾（擋沙＋進清真寺女士遮髮）</span></li>
     <li><span><b>人工淚液</b>——乾熱＋沙塵＋冷氣，戴隱形眼鏡的人幾乎必備；隱形眼鏡族建議沙漠那兩天改戴眼鏡</span></li>
@@ -1228,7 +1266,7 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
   <h4>電器（先看這條再決定帶不帶）</h4>
   <div class="warn"><b>埃及是 220V／歐規 C 型圓孔插座，台灣是 110V。</b>高功率電器（<b>吹風機、攜帶式熱水壺</b>）如果不是「100–240V 雙電壓」機型，插上去會燒掉，甚至跳電——<b>出發前務必看機身標示</b>。安全做法：① 吹風機<b>先問飯店有沒有</b>（Soul、Eileen、遊輪、Steigenberger、Sunny Days 這類幾乎都有，只有沙漠酒店與 Amon Guest House 需確認）；② 熱水壺帶<b>雙電壓旅行式</b>或改帶保溫瓶，每天向飯店／船上要熱水。</div>
   <ul class="check">
-    <li><span><b>攜帶式熱水壺</b>——確認是 100–240V 雙電壓再帶；泡寶礦力、沖茶、長輩喝溫水很實用</span></li>
+    <li><span><b>攜帶式熱水壺</b>——確認是 100–240V 雙電壓再帶；泡寶礦力、沖茶、想喝溫水時很實用</span></li>
     <li><span><b>吹風機</b>——先問飯店，能省就別帶（重又佔行李，還有電壓風險）</span></li>
     <li><span><b>萬用轉接頭</b>（C 型）×2–3 個、行動電源、手電筒或頭燈（沙漠營地必備）、相機記憶卡</span></li>
   </ul>
@@ -1250,7 +1288,8 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
 </div>
 
 <div class="card no-print"><h3>要印出來怎麼處理</h3><ul style="padding-left:22px">
- <li><b>直接用 Chrome／Edge 開這個檔案 → Cmd/Ctrl+P</b>。我已經寫好列印樣式，會自動：隱藏導覽列與這張卡片、<b>隱藏所有照片</b>（省墨、印出來也不好看）、<b>保留地圖與表格</b>（向量圖印出來很清楚）、卡片與表格<b>不跨頁截斷</b>、<b>超連結後面會印出網址</b>（現場沒網路時能手打）。</li>
+ <li><b>兩種輸出，用下面的按鈕選</b>：<br><button type="button" onclick="document.body.classList.remove('print-photos');window.print()" style="font:inherit;padding:7px 14px;margin:6px 8px 6px 0;border:1px solid var(--line);border-radius:8px;background:var(--sand2);cursor:pointer">列印／存 PDF（無照片・省墨，約 54 頁）</button><button type="button" onclick="document.body.classList.add('print-photos');window.print()" style="font:inherit;padding:7px 14px;margin:6px 0;border:1px solid var(--gold);border-radius:8px;background:var(--gold);color:#fff;cursor:pointer">含照片版（存到手機看）</button><br><span style="font-size:13.5px;color:var(--ink2)">含照片版會印出所有照片與底色，適合存成 PDF 放手機；紙本列印請用左邊那顆。</span></li>
+  <li><b>手動做法</b>：Chrome／Edge 開檔案 → Cmd/Ctrl+P。我已經寫好列印樣式，會自動：隱藏導覽列與這張卡片、<b>隱藏所有照片</b>（省墨、印出來也不好看）、<b>保留地圖與表格</b>（向量圖印出來很清楚）、卡片與表格<b>不跨頁截斷</b>、<b>超連結後面會印出網址</b>（現場沒網路時能手打）。</li>
  <li><b>版面設定</b>：A4、直向、邊界「預設」；<b>不需要勾「背景圖形」</b>（樣式已針對黑白列印調過，勾了只會多吃墨）。</li>
  <li><b>建議只印這幾段就好</b>（全部印約 30 頁以上）：<br>
  ① <b>每日行程速覽</b>（1–2 頁，最重要）② <b>行前準備 Check List</b>（約 3 頁）③ <b>每日行程</b>的 15 張卡片（約 10 頁）④ <b>門票價目表</b>（1 頁）——這樣約 15 頁。整份印出來實測是 <b>54 頁 A4</b>，全印太厚。<br>
