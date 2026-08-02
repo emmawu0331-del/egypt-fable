@@ -21,6 +21,12 @@ h1,h2,h3,h4{font-family:'Noto Serif TC',serif;line-height:1.4}
 nav{position:sticky;top:0;z-index:99;background:rgba(43,33,24,.96);backdrop-filter:blur(8px);display:flex;justify-content:center;flex-wrap:wrap;gap:2px;padding:8px 10px;box-shadow:0 2px 12px rgba(0,0,0,.25)}
 nav a{color:#e8dcc3;text-decoration:none;padding:6px 14px;border-radius:20px;font-size:14.5px;font-weight:500;white-space:nowrap;transition:.2s}
 nav a:hover{background:var(--gold);color:#fff}
+nav a.active{background:var(--gold2);color:#2b2118;font-weight:700}
+@media(max-width:720px){
+  nav{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{flex:0 0 auto}
+}
 
 /* ===== HERO ===== */
 .hero{position:relative;min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(25,18,10,.35),rgba(25,18,10,.65)),url('images/giza.jpg') center/cover;color:#fff;padding:60px 20px}
@@ -1520,5 +1526,40 @@ footer .hiero{font-size:24px;letter-spacing:.3em;margin-bottom:10px;color:var(--
  埃及自由行手冊・2026.9.25 – 10.11<br>行前請以官方資訊再次確認票價與時刻｜圖片來源：Wikimedia Commons（開放授權）<br>Ankh, Djed, Was —— 生命、穩定、力量
 </footer>
 
+<script>
+(function(){
+  var nav = document.querySelector('nav');
+  if(!nav) return;
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+  var secs = links.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); });
+  var current = -1, ticking = false;
+
+  function update(){
+    ticking = false;
+    var y = window.scrollY + nav.offsetHeight + 24;
+    var idx = -1;
+    for(var i = 0; i < secs.length; i++){
+      if(secs[i] && secs[i].offsetTop <= y) idx = i;
+    }
+    // 捲到最底時固定選最後一項
+    if(window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) idx = secs.length - 1;
+    if(idx === current) return;
+    current = idx;
+    links.forEach(function(a, i){ a.classList.toggle('active', i === idx); });
+    // 手機的單行導覽列：把目前項目捲進視野
+    if(idx >= 0 && nav.scrollWidth > nav.clientWidth){
+      var a = links[idx];
+      var target = a.offsetLeft - (nav.clientWidth - a.offsetWidth) / 2;
+      nav.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
+    }
+  }
+  function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('hashchange', function(){ setTimeout(update, 60); });
+  update();
+})();
+</script>
 </body>
 </html>
